@@ -1,0 +1,310 @@
+:root
+{
+--dark-color:#19283f;
+--green-color:#33ba4f;
+--red-color:#f50025;
+--yellow-color:#ffc400;
+--section-color:#eff7fa;
+}
+body
+{
+font-family: "Roboto","sans-serif";
+ background-image: url(images/ASS.png);
+}
+.main-btn{
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+    padding: 0.5rem 1rem;
+    justify-content: space-between;
+}
+.main-btn:hover{
+    color: var(--yellow-color);
+}
+.main-title::after{
+    content: '';
+    width: 120px;
+    height: 2px;
+    background-color: var(--green-color);
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* Strat navbar */
+h1,h2{
+    font-family: sans-serif;
+    font-weight: 400;
+}
+a{
+    text-decoration: none;
+}
+li{
+ list-style: none;
+}
+flex{
+    display: flex;
+}
+.flex_space{
+  display: flex;
+  justify-content: space-between;
+}
+button{
+    border: none;
+    background: none;
+    outline: none;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.button{
+    color:var(--yellow-color);
+    text-decoration: none;
+    background-color: var(--red-color);
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 10px;  
+}
+.container{
+    max-width: 85%;
+    margin: auto;
+}
+header{
+    height: 10vh;
+    line-height: 10vh;
+    padding: 0 20px;
+    background-color: var(--dark-color);
+    color: white;
+    border-top: solid crimson;
+}
+header h2{
+    margin: 23px 0;
+}
+header ul{
+    display: inline-block;
+}
+header ul li{
+    display: inline-block;
+    text-transform: uppercase;
+}
+header ul li a{
+   color: #ffffff;
+   margin: 0 10px;
+   transition: 0.5s;
+}
+header ul li a:hover{
+    color: var(--green-color);
+    font-size: 18px;
+}
+header i{
+    margin: 0 20px;
+} 
+header button{
+    padding: 13px 40px;
+}
+header .navlinks span{
+ display: none;
+}
+/* End   navbar */
+/* strat landing*/
+.landing{
+    min-height: calc(100vh - 72px);
+    background-color: var(--dark-color);
+}
+/*End    landing */
+/*strat features*/
+.features .icon-holder{
+height: 200px;
+}
+.features .icon-holder svg{
+    left: 50%;
+    transform: translateX(-50%);
+}
+.features .icon-holder .number{
+    font-size: 12rem;
+    color: var(--section-color);
+}
+.features .icon-holder.icon{
+    color: var(--green-color);
+}
+.features .feat h4{
+    color: var(--yellow-color);
+}
+/*End features*/
+/*strat our-work*/
+.our-work{
+    background-color: var(--section-color);
+}
+.our-work ul .active{
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+}
+.our-work ul li{
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+.our-work ul li:not(active):hover{
+color: var(--red-color);
+}
+.our-work .box{
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+}
+.our-work .box::before{
+    content: attr(data-work);
+    position: absolute;
+    background-color: rgb(51 209 204 / 76%);
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    transition: 0.3s;
+    font-size: 1.5rem;
+    transform: translateX(calc(-100% - 5px));
+}
+.our-work .box:hover::before
+{
+    transform: translateX(0);
+}
+/*End our-work*/
+/*strat Stuff*/
+.stuff .description
+{
+    max-width: 500px;
+}
+/*strat Stuff*/
+/* start stuffr*/
+ 
+ .stuffr p{
+    color: black;
+    font-size: 18px;
+ }
+/* end stuffr */
+/*start team*/
+.team
+{
+    background-color: var(--section-color);
+}
+.team h2{
+    color: var(--yellow-color);
+
+}
+.team .box h4{
+    background-color: var(--green-color);
+}
+/*En team*/
+/*start project*/
+.project{
+    background-color: var(--dark-color);
+}
+/*End project*/
+/*Start Subscribe*/
+
+.Subscribe input[type="text"]{
+    border: none;
+    border-bottom: 1px solid white;
+}
+.Subscribe input[type="text"]:focus{
+    outline: none;
+    
+}
+.Subscribe::placeholder{
+    color: white;
+}
+.Subscribe input[type="submit"]{
+    background-color: var(--dark-color);
+    color: var(--yellow-color);
+}
+/*End Subscribe*/
+
+/*start footer*/
+.footer{
+    background-color:var(--dark-color);
+}
+
+.footer a{
+    color: white;
+    text-decoration: none;
+}
+.footer h5{
+font-size: 18px;
+color: white;
+border-bottom: solid ;
+display: inline-block;
+padding: 10px;
+}
+.footer #contact-box{
+    width: 100%;
+    display: flex;
+    margin-top: 15px;
+    text-decoration: none;
+    padding: 10px;
+}
+.footer #contact-box img{
+   width: 45px;
+   margin: 20px 20px 20px 0;
+}
+.footer .copyright> span{
+    color: var(--green-color);
+ }
+ .footer .copyright div span{
+    color: var(--yellow-color);
+ }
+/*end footer*/
+
+@media (max-width: 768px) {
+    h1, h2 {
+        font-family: sans-serif;
+        font-weight: 400;
+        font-size: 1.4em; /* تعديل حجم الخط */
+    }
+
+    header {
+        height: auto; /* تغيير الارتفاع ليكون تلقائي */
+        line-height: normal; /* تعديل ارتفاع السطر */
+        padding: 10px; /* تقليل الحشوة */
+        text-align: center; /* توسيط النص */
+    }
+
+    header img {
+        width: 80%; /* زيادة عرض الصورة لتناسب الشاشة */
+        height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+    }
+
+    header ul {
+        display: flex; /* تغيير العرض إلى كتلة */
+        text-align: center; /* توسيط العناصر */
+    }
+
+    header ul li {
+        display: block; /* عرض العناصر في عمود */
+        margin: 5px 0; /* إضافة مسافة بين العناصر */
+    }
+
+    header ul li a {
+        margin-right: 10px 0; /* تقليل المسافة بين الروابط */
+    }
+
+    header button {
+        padding: 10px 20px; /* تقليل الحشوة */
+    }
+
+    .landing {
+        min-height: auto; /* تغيير الحد الأدنى للارتفاع */
+        padding: 20px; /* إضافة حشوة */
+    }
+
+    .landing #contect-box {
+        width: 100%; /* جعل العرض 100% */
+        flex-direction: column; /* تغيير الاتجاه إلى عمودي */
+        align-items: center; /* توسيط العناصر */
+    }
+
+    .landing #contect-box img {
+        width: 80%; /* زيادة عرض الصورة لتناسب الشاشة */
+        margin: 10px 0; /* إضافة مسافة بين الصورة والنص */
+    }
+}

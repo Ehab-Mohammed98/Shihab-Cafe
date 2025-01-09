@@ -1,0 +1,331 @@
+:root
+{
+--dark-color:#19283f;
+--green-color:#33ba4f;
+--red-color:#f50025;
+--yellow-color:#ffc400;
+--section-color:#eff7fa;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body
+{
+font-family: "Roboto","sans-serif";
+box-sizing: content-box;
+margin:0px;
+padding: 0px;
+}
+.main-btn{
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+    padding: 0.5rem 1rem;
+}
+.main-btn:hover{
+    color: var(--yellow-color);
+}
+.btn{
+    background-color: var(--red-color);
+    padding: 0.5rem 1rem;
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 30px;  
+
+}
+.btn a{
+    text-decoration: none;
+    display: inline-block;
+    color: var(--yellow-color);
+}
+/* Strat header */
+h1,h2{
+    font-family: sans-serif;
+    font-weight: 400;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.flex{
+    display: flex;
+}
+.flex_space{
+  display: flex;
+  justify-content: space-between;
+}
+button{
+    border: none;
+    background: none;
+    outline: none;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.button{
+    text-decoration: none;
+    background-color: var(--red-color);
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 10px;  
+}
+.button a{
+    color: var(--yellow-color);
+}
+.container{
+    max-width: 85%;
+    margin: auto;
+}
+header{
+    height: 10vh;
+    line-height: 10vh;
+    padding: 0 20px;
+    background-color: var(--dark-color);
+    color: white;
+    border-top: solid crimson;
+}
+header img{
+    width: 40%;
+    height: 60%;
+}
+header ul{
+    display: inline-block;
+}
+header ul li{
+    display: inline-block;
+    text-transform: uppercase;
+}
+header ul li a{
+   color: #ffffff;
+   margin: 0 10px;
+   transition: 0.5s;
+}
+header ul li a:hover{
+    color: var(--green-color);
+    font-size: 18px;
+}
+header i{
+    margin: 0 20px;
+} 
+header button{
+    padding: 13px 40px;
+}
+header .navlinks span{
+ display: none;
+}
+/* End   header */
+/*Start lading*/
+.landing{
+    background-color: var(--dark-color);
+    min-height: calc(100vh - 72px);
+}
+.landing #contect-box{
+    width: 50%;
+    display: flex;
+    margin-top: 10px;
+    }
+    .landing #contect-box img{
+    width: 20%;
+    margin: 20px 20px 20px 0;
+    }
+/*End lading*/
+/*start notilla*/
+.notilla .description{
+    width: 500p;
+}
+.notilla .container h3{
+    color: crimson;
+}
+/*End notilla*/
+/*start services*/
+.services{
+    background-color: var(--dark-color);
+}
+.services h2{
+    text-align: center;
+    margin: 50px 0px;
+    color: white;
+}
+.services .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.services .card{
+    border: solid;
+    margin-right: 20px;
+    box-shadow: 3px 3px 6px 6px;
+    padding: 10px;
+    width: 16em;
+    margin-bottom: 40px;
+    text-align: center;
+    
+}
+.card h3{
+    color: crimson;
+    font-weight: 1000;
+}
+.card p{
+font-size: 14px;
+}
+.services .card>div{
+    color: var(--dark-color);
+    font-size: 40px;
+}
+/*End services*/
+/*start Manu*/
+.servicesM h2{
+    text-align: center;
+    margin: 50px 0px;
+}
+.servicesM .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.servicesM .card{
+    border: solid;
+    margin-right: 20px;
+    box-shadow: 3px 3px 6px 6px;
+    padding: 10px;
+    width: 16em;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.card h3{
+    color: crimson;
+    font-weight: 1000;
+}
+.card p{
+font-size: 14px;
+}
+.servicesM .card>div{
+    color: var(--dark-color);
+    font-size: 40px;
+}
+/*End Manu*/
+/*End subscibe*/
+/*start Subscribe*/
+.Subscribe  {
+    display: flex;
+    align-items:center;
+    background-color:var(--yellow-color);
+}
+
+.Subscribe h2,p{
+    text-align: center;
+    color: white;
+}
+.Subscribe p{
+    font-size: 25px;
+    padding: 50px;
+}
+.Subscribe input[type="text"]
+{
+    border: none;
+    border-bottom: 1px solid white;
+}
+.Subscribe input[type="text"]:focus
+{
+    outline: none;
+}
+.Subscribe input[type="submit"]{
+    background-color: var(--dark-color);
+    color: var(--yellow-color);
+}
+.Subscribe ::placeholder{
+    color: white;
+}
+/*End Subscribe*/
+/*Start footer*/
+.footer{
+    background-color:var(--dark-color);
+}
+
+.footer a{
+    color: white;
+    text-decoration: none;
+}
+.footer h5{
+font-size: 18px;
+color: white;
+border-bottom: solid white;
+display: inline-block;
+padding: 10px;
+}
+.footer #contact-box{
+    width: 100%;
+    display: flex;
+    margin-top: 15px;
+    text-decoration: none;
+    padding: 10px;
+}
+.footer #contact-box img{
+   width: 45px;
+   margin: 20px 20px 20px 0;
+}
+.footer .copyright> span{
+    color: var(--green-color);
+ }
+ .footer .copyright div span{
+    color: var(--yellow-color);
+ }
+/*end footer*/
+
+@media (max-width: 768px) {
+    h1, h2 {
+        font-family: sans-serif;
+        font-weight: 400;
+        font-size: 1.4em; /* تعديل حجم الخط */
+    }
+
+    header {
+        height: auto; /* تغيير الارتفاع ليكون تلقائي */
+        line-height: normal; /* تعديل ارتفاع السطر */
+        padding: 10px; /* تقليل الحشوة */
+        text-align: center; /* توسيط النص */
+    }
+
+    header img {
+        width: 80%; /* زيادة عرض الصورة لتناسب الشاشة */
+        height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+    }
+
+    header ul {
+        display: flex; /* تغيير العرض إلى كتلة */
+        text-align: center; /* توسيط العناصر */
+    }
+
+    header ul li {
+        display: block; /* عرض العناصر في عمود */
+        margin: 5px 0; /* إضافة مسافة بين العناصر */
+    }
+
+    header ul li a {
+        margin-right: 10px 0; /* تقليل المسافة بين الروابط */
+    }
+
+    header button {
+        padding: 10px 20px; /* تقليل الحشوة */
+    }
+
+    .landing {
+        min-height: auto; /* تغيير الحد الأدنى للارتفاع */
+        padding: 20px; /* إضافة حشوة */
+    }
+
+    .landing #contect-box {
+        width: 100%; /* جعل العرض 100% */
+        flex-direction: column; /* تغيير الاتجاه إلى عمودي */
+        align-items: center; /* توسيط العناصر */
+    }
+
+    .landing #contect-box img {
+        width: 80%; /* زيادة عرض الصورة لتناسب الشاشة */
+        margin: 10px 0; /* إضافة مسافة بين الصورة والنص */
+    }
+}
