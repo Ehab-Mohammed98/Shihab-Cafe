@@ -1,207 +1,185 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- اربط ملف Bootstrap هنا إذا لم تكن الكلاسات معرّفة داخل style.css أو CA.css -->
-    <link rel="stylesheet" href="Css/style.css">
-    <link rel="stylesheet" href="Css/CA.css">
-    <title>Shihab Coffee Shop</title>
+    <title>مقهى شهاب | Shihab Coffee</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <div class="content flex_space">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/logo.jpg" alt="Shihab Coffee Shop Logo">
-                </a>
-            </div>
-            <nav class="nav-link" aria-label="Main Navigation">
-                <ul class="menulist">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="AboutMyas.html">About</a></li>
-                    <li><a href="Server.html">Services</a></li>
-                    <li><a href="Manu.html">Menu</a></li>
-                    <li><a href="image.html">View Images</a></li>
-                </ul>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#home" class="brand">
+                <span class="brand-mark">ش</span>
+                <span class="brand-text">مقهى شهاب</span>
+            </a>
+
+            <nav class="nav-links" aria-label="التنقل الرئيسي">
+                <a href="#home">الرئيسية</a>
+                <a href="#about">قصتنا</a>
+                <a href="#services">الخدمات</a>
+                <a href="#menu">القائمة</a>
+                <a href="#newsletter">النشرة</a>
             </nav>
+
+            <a href="#menu" class="btn btn-primary">تصفح القائمة</a>
         </div>
     </header>
 
     <main>
-        <section class="landing d-flex justify-content-center align-items-center">
-            <div class="text-center text-white">
-                <h1>Shihab Coffee Shop</h1>
-                <p>We hope you will visit us in the shop</p>
-                <a href="#about-section" class="btn rounded-pill main-btn">Get Started</a>
-            </div>
-        </section>
-
-        <section id="about-section" class="notilla">
-            <div class="container">
-                <div class="main-title text-center mt-5 mb-5 position-relative">
-                    <h2>About Us</h2>
-                </div>
-                <div class="row align-items-center">
-                    <div class="col-lg-8">
-                        <div class="notiolla-img">
-                            <img src="images/coffeShope.jpg" alt="Interior of Shihab Coffee Shop">
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mb-4 text-center text-md-start">
-                        <h3 id="wqs">Shihab Coffee Shop</h3>
-                        <p id="tt" class="fs-6 mb-5">
-                            <span style="color: black; font-size: 22px;">
-                                is a Saudi company, started in 1991 in the Riyadh region by three partners:
-                                Arabic language teacher Muhammad Ali, history teacher Riyad Abdulaziz, and writer Omar Sultan.
-                            </span>
-                        </p>
-                        <a href="AboutMyas.html" class="btn rounded-pill main-btn">Get Started</a>
-                    </div>
+        <section id="home" class="hero">
+            <div class="container hero-content">
+                <span class="badge">تأسس عام 1991 في الرياض</span>
+                <h1>قهوة دافئة وأجواء تليق بلحظاتك</h1>
+                <p>
+                    في مقهى شهاب نجمع بين عبق القهوة والضيافة الأصيلة، مع غرف مخصصة للعمل والاجتماعات والمناسبات الخاصة وتشكيلة متجددة من المشروبات والحلويات.
+                </p>
+                <div class="hero-actions">
+                    <a href="#menu" class="btn btn-primary">اكتشف المشروبات</a>
+                    <a href="#about" class="btn btn-outline">تعرف على قصتنا</a>
                 </div>
             </div>
         </section>
 
-        <section class="services">
-            <div class="main-title text-center mt-5 mb-5 position-relative">
-                <h2>Services</h2>
-            </div>
-            <div class="container">
-                <div class="card">
-                    <img src="images/Server/computer2.jpg" alt="Internet room computers">
-                    <h3 id="bb">Internet Room</h3>
-                    <p id="bbs">We have free internet around the clock</p>
-                    <a href="Server.html" class="btn rounded-pill main-btn">More</a>
+        <section id="about" class="section">
+            <div class="container about-grid">
+                <div class="about-card highlight-box">
+                    <span class="small-label">منذ 1991</span>
+                    <h2>شركة سعودية بدأت بشغف الكلمة والمعرفة</h2>
+                    <p>
+                        انطلق مقهى شهاب في منطقة الرياض على يد ثلاثة مؤسسين: معلم اللغة العربية محمد علي، ومعلم التاريخ رياض عبدالعزيز، والكاتب عمر سلطان؛ ليصبح مساحة مريحة للقاء والحوار والاسترخاء.
+                    </p>
                 </div>
-                <div class="card">
-                    <img src="images/Server/Meating3.jpg" alt="Meeting room setup">
-                    <h3 id="room">Meeting Room</h3>
-                    <p id="dog">Comfortable space for meetings and group work</p>
-                    <a href="Server.html" class="btn rounded-pill main-btn">More</a>
-                </div>
-                <div class="card">
-                    <img src="images/Server/Un1.jpg" alt="Birthday room celebration setup">
-                    <h3 id="uu">Birthday Room</h3>
-                    <p id="sn">Dedicated space for private gatherings and celebrations</p>
-                    <a href="Server.html" class="btn rounded-pill main-btn">More</a>
+
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <strong>1991</strong>
+                        <span>سنة التأسيس</span>
+                    </div>
+                    <div class="stat-box">
+                        <strong>3</strong>
+                        <span>غرف ومساحات مخصصة</span>
+                    </div>
+                    <div class="stat-box">
+                        <strong>24/7</strong>
+                        <span>اتصال إنترنت مجاني</span>
+                    </div>
+                    <div class="stat-box">
+                        <strong>متنوعة</strong>
+                        <span>مشروبات ساخنة وباردة وحلويات</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="servicesM">
-            <div class="main-title text-center mt-5 mb-5 position-relative">
-                <h2 id="viwe">View Images</h2>
-            </div>
+        <section id="services" class="section section-alt">
             <div class="container">
-                <div class="card">
-                    <img src="images/hrat/Red Tea.png" alt="Hot red tea">
-                    <h3 id="hrts">Hot Drinks</h3>
+                <div class="section-header">
+                    <span class="small-label">مساحات وخدمات</span>
+                    <h2>غرف مجهزة لراحتك</h2>
+                    <p>اختر المساحة المناسبة لوقتك سواء للتركيز أو الاجتماع أو الاحتفال.</p>
                 </div>
-                <div class="card">
-                    <img src="images/Cool/pepse.png" alt="Cold beverage">
-                    <h3 id="coole">Cold Drinks</h3>
+
+                <div class="cards-grid">
+                    <article class="card">
+                        <span class="card-tag">01</span>
+                        <h3>غرفة الإنترنت</h3>
+                        <p>بيئة هادئة مع اتصال إنترنت مجاني متاح على مدار الساعة للعمل والدراسة وتصفح المشاريع.</p>
+                    </article>
+
+                    <article class="card">
+                        <span class="card-tag">02</span>
+                        <h3>غرفة الاجتماعات</h3>
+                        <p>مساحة عملية ومريحة للقاءات العمل والمناقشات الجماعية بعيداً عن ضوضاء الصالة الرئيسية.</p>
+                    </article>
+
+                    <article class="card">
+                        <span class="card-tag">03</span>
+                        <h3>غرفة المناسبات وأعياد الميلاد</h3>
+                        <p>ركن خاص للاستضافات العائلية والاحتفالات الصغيرة مع خدمة مشروبات وحلويات متكاملة.</p>
+                    </article>
                 </div>
-                <div class="card">
-                    <img src="images/Sweet/Chocolate cake.png" alt="Chocolate cake">
-                    <h3 id="sweetes">Sweets</h3>
-                </div>
-            </div>
-            <div class="d-flex justify-content-center mt-5">
-                <a class="btn rounded-pill main-btn" href="image.html" id="more">See More</a>
             </div>
         </section>
 
-        <section class="Subscribe pt-5 pb-5 text-center text-md-start" style="background-color: #ffd400;">
+        <section id="menu" class="section">
             <div class="container">
-                <form action="#" method="post" class="row align-items-center">
-                    <div class="col-md-6 col-lg-3">
-                        <label for="newsletter-email" class="fw-bold fs-5 mb-3 d-block">Subscribe to our Newsletter:</label>
-                    </div>
-                    <div class="col-md-6 col-lg-7 mb-5 mb-md-0">
-                        <input
-                            id="newsletter-email"
-                            type="email"
-                            required
-                            class="w-100 text-light p-2 bg-transparent"
-                            placeholder="Enter Email Address"
-                        >
-                    </div>
-                    <div class="col-md-6 col-lg-2">
-                        <button type="submit" class="btn rounded-pill">Subscribe</button>
-                    </div>
+                <div class="section-header">
+                    <span class="small-label">مختارات المقهى</span>
+                    <h2>أبرز أقسام القائمة</h2>
+                    <p>نقدم أصنافاً متنوعة تناسب جميع الأوقات والأذواق.</p>
+                </div>
+
+                <div class="cards-grid">
+                    <article class="card menu-card">
+                        <span class="pill">ساخن</span>
+                        <h3>المشروبات الساخنة</h3>
+                        <p>شاي أحمر كلاسيكي، قهوة، ومشروبات دافئة تُحضّر بعناية لأجواء هادئة.</p>
+                    </article>
+
+                    <article class="card menu-card">
+                        <span class="pill">بارد</span>
+                        <h3>المشروبات الباردة</h3>
+                        <p>مشروبات منعشة ومثلجة مثالية للأيام الدافئة وبعد الجلسات الطويلة.</p>
+                    </article>
+
+                    <article class="card menu-card">
+                        <span class="pill">حلويات</span>
+                        <h3>الحلويات</h3>
+                        <p>كيك الشوكولاتة وأصناف حلوى مختارة لتكتمل تجربة القهوة والضيافة.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="newsletter" class="newsletter">
+            <div class="container newsletter-box">
+                <div>
+                    <h2>اشترك في النشرة البريدية</h2>
+                    <p>كن أول من يعلم بالعروض الجديدة والمناسبات الخاصة في مقهى شهاب.</p>
+                </div>
+
+                <form class="newsletter-form" action="#" method="post">
+                    <label for="email" class="sr-only">البريد الإلكتروني</label>
+                    <input id="email" type="email" placeholder="أدخل بريدك الإلكتروني" required>
+                    <button type="submit" class="btn btn-dark">اشتراك</button>
                 </form>
             </div>
         </section>
     </main>
 
-    <footer class="footer pt-5 pb-5 text-center text-white text-md-start">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-lg-4">
-                    <div class="info">
-                        <img src="images/Coffe.jpg" alt="Shihab Coffee branding" class="mb-4">
-                        <p class="mb-5">
-                            Shihab is a Saudi coffee company.
-                        </p>
-                        <div class="copyright">
-                            Created By <span>Saed Digital Company</span>
-                            <div class="der">&copy; <span>Shihab Coffee</span></div>
-                        </div>
-                    </div>
-                </div>
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <h3>مقهى شهاب</h3>
+                <p>مقهى شهاب شركة سعودية تأسست عام 1991 في منطقة الرياض، وتقدم تجربة ضيافة وخدمات متكاملة.</p>
+            </div>
 
-                <div class="col-md-6 col-lg-2">
-                    <h5>Office</h5>
-                    <p>Valley Street</p>
-                    <p>The Oasis East, Omdurman</p>
-                    <i class="fa fa-location-dot" aria-hidden="true"></i>
-                    <a href="https://maps.google.com/?q=Khartoum,Sudan" target="_blank" rel="noopener noreferrer">Khartoum, Sudan</a><br>
-                    <i class="fa fa-phone" aria-hidden="true"></i>
-                    <a href="tel:+249919449373">[+249] 919449373</a>
-                </div>
+            <div>
+                <h4>التواصل والموقع</h4>
+                <p>شارع الوادي، الواحة الشرقية، أم درمان - الخرطوم، السودان</p>
+                <p><a href="tel:+249919449373">[+249] 919449373</a></p>
+                <p><a href="mailto:team.ShihabCoffe@gmail.com">team.ShihabCoffe@gmail.com</a></p>
+            </div>
 
-                <div class="col-md-6 col-lg-2">
-                    <div class="links">
-                        <h5 id="nks" class="text-light">Links</h5>
-                        <ul class="nav-link lh-lg">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="AboutMyas.html">About</a></li>
-                            <li><a href="Server.html">Services</a></li>
-                            <li><a href="Manu.html">Menu</a></li>
-                            <li><a href="image.html">View Images</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="contact">
-                        <h5 id="tab" class="text-light">Contact Us</h5>
-                        <p id="beta" class="lh-lg mt-3 mb-5">
-                            Contact us via email or phone for any inquiries regarding services and offers.
-                        </p>
-                        <a class="btn rounded-pill main-btn mb-5" href="mailto:team.ShihabCoffe@gmail.com" id="use">team.ShihabCoffe@gmail.com</a>
-                        <div id="contect-box">
-                            <a href="https://Wa.me/qr/VIE45AD7KGHZN1" target="_blank" rel="noopener noreferrer">
-                                <img src="images/instagram.png" alt="Instagram / WhatsApp">
-                            </a>
-                            <a href="https://www.facebook.com/profile.php?id=100007549086144&mibextid=9R9pXO" target="_blank" rel="noopener noreferrer">
-                                <img src="images/facebook.png" alt="Facebook">
-                            </a>
-                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                                <img src="images/twitter.png" alt="Twitter">
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            <div>
+                <h4>روابط سريعة</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#about">قصتنا</a></li>
+                    <li><a href="#services">الخدمات</a></li>
+                    <li><a href="#menu">القائمة</a></li>
+                </ul>
             </div>
         </div>
-    </footer>
 
-    <!-- ملاحظة: إذا كان javascript.js يعتمد على jQuery، فضع jquery.js قبله -->
-    <script src="Css/jquery.js"></script>
-    <script src="Css/javascript.js"></script>
+        <div class="container footer-bottom">
+            <span>© مقهى شهاب - جميع الحقوق محفوظة</span>
+            <span>تصميم وتنفيذ: شركة ساعد الرقمية</span>
+        </div>
+    </footer>
 </body>
 </html>
-
