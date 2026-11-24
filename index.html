@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مقهى شهاب — ضيافة دافئة، غرف مجهزة للإنترنت والاجتماعات والمناسبات، وتشكيلة متنوعة من المشروبات والحلويات.">
     <title>مقهى شهاب | Shihab Coffee</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,28 +13,42 @@
 <body>
     <header class="site-header">
         <div class="container header-inner">
-            <a href="#home" class="brand">
-                <span class="brand-mark">ش</span>
+            <a href="#home" class="brand" aria-label="العودة إلى الرئيسية - مقهى شهاب">
+                <span class="brand-mark" aria-hidden="true">ش</span>
                 <span class="brand-text">مقهى شهاب</span>
             </a>
 
-            <nav class="nav-links" aria-label="التنقل الرئيسي">
-                <a href="#home">الرئيسية</a>
-                <a href="#about">قصتنا</a>
-                <a href="#services">الخدمات</a>
-                <a href="#menu">القائمة</a>
-                <a href="#newsletter">النشرة</a>
+            <button
+                type="button"
+                class="menu-toggle"
+                aria-expanded="false"
+                aria-controls="main-nav"
+                aria-label="فتح أو إغلاق قائمة التنقل"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="main-nav" class="nav-links" aria-label="التنقل الرئيسي">
+                <ul>
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#about">قصتنا</a></li>
+                    <li><a href="#services">الخدمات</a></li>
+                    <li><a href="#menu">القائمة</a></li>
+                    <li><a href="#newsletter">النشرة</a></li>
+                </ul>
             </nav>
 
-            <a href="#menu" class="btn btn-primary">تصفح القائمة</a>
+            <a href="#menu" class="btn btn-primary header-cta">تصفح القائمة</a>
         </div>
     </header>
 
     <main>
-        <section id="home" class="hero">
+        <section id="home" class="hero" aria-labelledby="hero-heading">
             <div class="container hero-content">
                 <span class="badge">تأسس عام 1991 في الرياض</span>
-                <h1>قهوة دافئة وأجواء تليق بلحظاتك</h1>
+                <h1 id="hero-heading">قهوة دافئة وأجواء تليق بلحظاتك</h1>
                 <p>
                     في مقهى شهاب نجمع بين عبق القهوة والضيافة الأصيلة، مع غرف مخصصة للعمل والاجتماعات والمناسبات الخاصة وتشكيلة متجددة من المشروبات والحلويات.
                 </p>
@@ -44,17 +59,17 @@
             </div>
         </section>
 
-        <section id="about" class="section">
+        <section id="about" class="section" aria-labelledby="about-heading">
             <div class="container about-grid">
-                <div class="about-card highlight-box">
+                <article class="about-card highlight-box">
                     <span class="small-label">منذ 1991</span>
-                    <h2>شركة سعودية بدأت بشغف الكلمة والمعرفة</h2>
+                    <h2 id="about-heading">شركة سعودية بدأت بشغف الكلمة والمعرفة</h2>
                     <p>
                         انطلق مقهى شهاب في منطقة الرياض على يد ثلاثة مؤسسين: معلم اللغة العربية محمد علي، ومعلم التاريخ رياض عبدالعزيز، والكاتب عمر سلطان؛ ليصبح مساحة مريحة للقاء والحوار والاسترخاء.
                     </p>
-                </div>
+                </article>
 
-                <div class="stats-grid">
+                <div class="stats-grid" aria-label="أبرز مميزات المقهى">
                     <div class="stat-box">
                         <strong>1991</strong>
                         <span>سنة التأسيس</span>
@@ -75,11 +90,11 @@
             </div>
         </section>
 
-        <section id="services" class="section section-alt">
+        <section id="services" class="section section-alt" aria-labelledby="services-heading">
             <div class="container">
                 <div class="section-header">
                     <span class="small-label">مساحات وخدمات</span>
-                    <h2>غرف مجهزة لراحتك</h2>
+                    <h2 id="services-heading">غرف مجهزة لراحتك</h2>
                     <p>اختر المساحة المناسبة لوقتك سواء للتركيز أو الاجتماع أو الاحتفال.</p>
                 </div>
 
@@ -105,11 +120,11 @@
             </div>
         </section>
 
-        <section id="menu" class="section">
+        <section id="menu" class="section" aria-labelledby="menu-heading">
             <div class="container">
                 <div class="section-header">
                     <span class="small-label">مختارات المقهى</span>
-                    <h2>أبرز أقسام القائمة</h2>
+                    <h2 id="menu-heading">أبرز أقسام القائمة</h2>
                     <p>نقدم أصنافاً متنوعة تناسب جميع الأوقات والأذواق.</p>
                 </div>
 
@@ -135,16 +150,23 @@
             </div>
         </section>
 
-        <section id="newsletter" class="newsletter">
+        <section id="newsletter" class="newsletter" aria-labelledby="newsletter-heading">
             <div class="container newsletter-box">
                 <div>
-                    <h2>اشترك في النشرة البريدية</h2>
+                    <h2 id="newsletter-heading">اشترك في النشرة البريدية</h2>
                     <p>كن أول من يعلم بالعروض الجديدة والمناسبات الخاصة في مقهى شهاب.</p>
                 </div>
 
                 <form class="newsletter-form" action="#" method="post">
                     <label for="email" class="sr-only">البريد الإلكتروني</label>
-                    <input id="email" type="email" placeholder="أدخل بريدك الإلكتروني" required>
+                    <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        autocomplete="email"
+                        placeholder="أدخل بريدك الإلكتروني"
+                        required
+                    >
                     <button type="submit" class="btn btn-dark">اشتراك</button>
                 </form>
             </div>
@@ -158,12 +180,12 @@
                 <p>مقهى شهاب شركة سعودية تأسست عام 1991 في منطقة الرياض، وتقدم تجربة ضيافة وخدمات متكاملة.</p>
             </div>
 
-            <div>
+            <address class="footer-contact">
                 <h4>التواصل والموقع</h4>
                 <p>شارع الوادي، الواحة الشرقية، أم درمان - الخرطوم، السودان</p>
-                <p><a href="tel:+249919449373">[+249] 919449373</a></p>
+                <p><a href="tel:+249919449373" dir="ltr">[+249] 919449373</a></p>
                 <p><a href="mailto:team.ShihabCoffe@gmail.com">team.ShihabCoffe@gmail.com</a></p>
-            </div>
+            </address>
 
             <div>
                 <h4>روابط سريعة</h4>
@@ -181,5 +203,25 @@
             <span>تصميم وتنفيذ: شركة ساعد الرقمية</span>
         </div>
     </footer>
+
+    <script>
+        const menuToggle = document.querySelector(".menu-toggle");
+        const mainNav = document.querySelector("#main-nav");
+
+        if (menuToggle && mainNav) {
+            menuToggle.addEventListener("click", () => {
+                const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+                menuToggle.setAttribute("aria-expanded", String(!isOpen));
+                mainNav.classList.toggle("is-open", !isOpen);
+            });
+
+            mainNav.querySelectorAll("a").forEach((link) => {
+                link.addEventListener("click", () => {
+                    menuToggle.setAttribute("aria-expanded", "false");
+                    mainNav.classList.remove("is-open");
+                });
+            });
+        }
+    </script>
 </body>
 </html>
