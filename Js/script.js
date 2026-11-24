@@ -79,6 +79,22 @@ const menuItems = [
     price: 16,
     desc: "مخبوز طازجاً ومقرمشاً ومحشو بكريمة اللوز الغنية.",
     img: "https://www.google.com/imgres?q=%D9%83%D8%B1%D8%A7%D9%85%D9%8A%D9%84%20%D9%84%D8%A7%D8%AA%D9%8A%D9%87%20%D8%AD%D8%A7%D8%B1&imgurl=https%3A%2F%2Fksacdn4.mnasaticdn.com%2Fuploads%2Fproduct_image%2F12999%2Fproduct_01603798532_thumb.jpg&imgrefurl=https%3A%2F%2Flatifacafe.com%2Far%2Fproduct%2F195931-hot-caramel-latte&docid=5OC_qS_IUYYkBM&tbnid=RXufQ3_IycBtMM&vet=12ahUKEwiIsOqkqaGYAxUehv0HHSGrKiAQnPAOegQIQRAA..i&w=400&h=400&hcb=2&ved=2ahUKEwiIsOqkqaGYAxUehv0HHSGrKiAQnPAOegQIQRAA"
+  },
+   {
+    id: 9,
+    name: "تركي ساخن",
+    category: "hot",
+    price: 16,
+    desc: "مخبوز طازجاً ومقرمشاً ومحشو بكريمة اللوز الغنية.",
+    img: "https://bashasaray.com/the-most-famous-turkish-drinks-video/?srsltid=AYCX9vKvtZI3TMluF-uVgv1U0DEhw_eZoU0oozCOpKP562_RXk_KJ6I5"
+  },
+  {
+    id: 10,
+    name: "لاتية بالكراميل",
+    category: "hot",
+    price: 16,
+    desc: "مخبوز طازجاً ومقرمشاً ومحشو بكريمة اللوز الغنية.",
+    img: "https://www.google.com/imgres?q=%D9%83%D8%B1%D8%A7%D9%85%D9%8A%D9%84%20%D9%84%D8%A7%D8%AA%D9%8A%D9%87%20%D8%AD%D8%A7%D8%B1&imgurl=https%3A%2F%2Fksacdn4.mnasaticdn.com%2Fuploads%2Fproduct_image%2F12999%2Fproduct_01603798532_thumb.jpg&imgrefurl=https%3A%2F%2Flatifacafe.com%2Far%2Fproduct%2F195931-hot-caramel-latte&docid=5OC_qS_IUYYkBM&tbnid=RXufQ3_IycBtMM&vet=12ahUKEwiIsOqkqaGYAxUehv0HHSGrKiAQnPAOegQIQRAA..i&w=400&h=400&hcb=2&ved=2ahUKEwiIsOqkqaGYAxUehv0HHSGrKiAQnPAOegQIQRAA"
   }
 ];
 
