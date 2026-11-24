@@ -1,931 +1,157 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" class="scroll-smooth">
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مقهى أرابيكا | فن القهوة المختصة</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Cairo & Tajawal -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مقهى أرابيكا | قهوة مختصة وأجواء دافئة</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Css/style.css" />
 </head>
-<body class="antialiased selection:bg-amber-500 selection:text-white">
+<body>
 
-    <!-- Header & Navigation -->
-    <header class="fixed top-0 w-full z-40 bg-espresso-950/95 backdrop-blur-md text-cream-50 border-b border-espresso-800 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <!-- Brand Logo -->
-                <a href="#home" class="flex items-center gap-3 group">
-                    <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center text-white shadow-lg group-hover:scale-105 transition-transform">
-                        <i class="fa-solid fa-mug-hot text-xl"></i>
-                    </div>
-                    <div>
-                        <span class="font-heading font-extrabold text-2xl tracking-wide text-cream-50 block leading-none">أرابيكا</span>
-                        <span class="text-xs text-amber-400 font-medium tracking-wider">قهوة مختصة ومخبوزات</span>
-                    </div>
-                </a>
-
-                <!-- Desktop Navigation -->
-                <nav class="hidden md:flex items-center gap-8">
-                    <a href="#home" class="text-cream-100 hover:text-amber-400 font-medium transition-colors">الرئيسية</a>
-                    <a href="#menu" class="text-cream-100 hover:text-amber-400 font-medium transition-colors">القائمة</a>
-                    <a href="#about" class="text-cream-100 hover:text-amber-400 font-medium transition-colors">عن المقهى</a>
-                    <a href="#reservation" class="text-cream-100 hover:text-amber-400 font-medium transition-colors">حجز طاولة</a>
-                    <a href="#contact" class="text-cream-100 hover:text-amber-400 font-medium transition-colors">تواصل معنا</a>
-                </nav>
-
-                <!-- Cart & Mobile Menu Actions -->
-                <div class="flex items-center gap-3">
-                    <!-- Cart Toggle Button -->
-                    <button id="cart-btn" class="relative p-3 rounded-xl bg-espresso-800 hover:bg-espresso-700 text-cream-50 transition-colors flex items-center gap-2 border border-espresso-700" aria-label="سلة الطلبات">
-                        <i class="fa-solid fa-bag-shopping text-lg text-amber-400"></i>
-                        <span class="hidden sm:inline font-medium text-sm">السلة</span>
-                        <span id="cart-badge" class="absolute -top-2 -left-2 w-6 h-6 rounded-full bg-amber-500 text-espresso-950 font-heading font-bold text-xs flex items-center justify-center shadow-md">0</span>
-                    </button>
-
-                    <!-- Mobile Menu Toggle -->
-                    <button id="mobile-menu-btn" class="md:hidden p-3 rounded-xl bg-espresso-800 hover:bg-espresso-700 text-cream-50 transition-colors" aria-label="القائمة الرئيسية">
-                        <i class="fa-solid fa-bars text-xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Mobile Dropdown Navigation -->
-        <div id="mobile-menu" class="hidden md:hidden bg-espresso-900 border-b border-espresso-800 px-4 pt-2 pb-6 space-y-2">
-            <a href="#home" class="mobile-link block px-4 py-3 rounded-xl text-cream-100 hover:bg-espresso-800 hover:text-amber-400 font-medium">الرئيسية</a>
-            <a href="#menu" class="mobile-link block px-4 py-3 rounded-xl text-cream-100 hover:bg-espresso-800 hover:text-amber-400 font-medium">القائمة</a>
-            <a href="#about" class="mobile-link block px-4 py-3 rounded-xl text-cream-100 hover:bg-espresso-800 hover:text-amber-400 font-medium">عن المقهى</a>
-            <a href="#reservation" class="mobile-link block px-4 py-3 rounded-xl text-cream-100 hover:bg-espresso-800 hover:text-amber-400 font-medium">حجز طاولة</a>
-            <a href="#contact" class="mobile-link block px-4 py-3 rounded-xl text-cream-100 hover:bg-espresso-800 hover:text-amber-400 font-medium">تواصل معنا</a>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="home" class="relative pt-28 pb-20 lg:pt-36 lg:pb-32 bg-espresso-950 text-cream-50 overflow-hidden">
-        <!-- Decorative Background Elements -->
-        <div class="absolute inset-0 coffee-pattern pointer-events-none"></div>
-        <div class="absolute -top-24 -left-24 w-96 h-96 bg-amber-600/20 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute bottom-0 right-0 w-80 h-80 bg-espresso-700/30 rounded-full blur-3xl pointer-events-none"></div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <!-- Text Content -->
-                <div class="lg:col-span-7 text-center lg:text-right space-y-6">
-                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-espresso-800/80 border border-espresso-700 text-amber-400 text-sm font-medium">
-                        <i class="fa-solid fa-sparkles"></i>
-                        <span>محمصة ومقهى أرابيكا المختص</span>
-                    </div>
-                    <h1 class="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-tight text-cream-50">
-                        حيث تلتقي <span class="text-transparent bg-clip-text bg-gradient-to-l from-amber-400 to-amber-600">أصالة البن</span> مع دفء اللحظات
-                    </h1>
-                    <p class="text-cream-200 text-lg sm:text-xl max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                        ننتقي أجود محاصيل القهوة العالمية ونحمصها بعناية فائقة لنقدم لك كوباً يروي حكاية شغف، مع تشكيلة من المخبوزات الطازجة يومياً في أجواء هادئة ومريحة.
-                    </p>
-                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
-                        <a href="#menu" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-amber-500 hover:bg-amber-600 text-espresso-950 font-heading font-bold text-lg shadow-lg shadow-amber-500/20 transition-all flex items-center justify-center gap-2">
-                            <span>استكشف القائمة</span>
-                            <i class="fa-solid fa-arrow-left text-sm"></i>
-                        </a>
-                        <a href="#reservation" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-espresso-800 hover:bg-espresso-700 text-cream-50 border border-espresso-700 font-heading font-bold text-lg transition-all flex items-center justify-center gap-2">
-                            <i class="fa-regular fa-calendar-check text-amber-400"></i>
-                            <span>احجز طاولة</span>
-                        </a>
-                    </div>
-
-                    <!-- Quick Stats -->
-                    <div class="grid grid-cols-3 gap-4 pt-8 border-t border-espresso-800/80 max-w-lg mx-auto lg:mx-0">
-                        <div>
-                            <div class="font-heading font-extrabold text-2xl sm:text-3xl text-amber-400">+12</div>
-                            <div class="text-xs sm:text-sm text-cream-300">محصول قهوة فاخر</div>
-                        </div>
-                        <div>
-                            <div class="font-heading font-extrabold text-2xl sm:text-3xl text-amber-400">100%</div>
-                            <div class="text-xs sm:text-sm text-cream-300">تحميص طازج أسبوعياً</div>
-                        </div>
-                        <div>
-                            <div class="font-heading font-extrabold text-2xl sm:text-3xl text-amber-400">4.9★</div>
-                            <div class="text-xs sm:text-sm text-cream-300">تقييم ضيوفنا</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Hero Visual / Artistic SVG Illustration -->
-                <div class="lg:col-span-5 flex justify-center">
-                    <div class="relative w-full max-w-md aspect-square rounded-3xl bg-gradient-to-b from-espresso-800 to-espresso-900 p-8 border border-espresso-700/80 shadow-2xl flex flex-col items-center justify-center">
-                        <!-- Floating Badge -->
-                        <div class="absolute -top-5 -right-5 bg-cream-50 text-espresso-950 px-5 py-3 rounded-2xl shadow-xl border border-cream-200 flex items-center gap-3">
-                            <span class="text-2xl">🥐</span>
-                            <div>
-                                <div class="font-heading font-bold text-sm">مخبوزات الصباح</div>
-                                <div class="text-xs text-espresso-600">تُخبز طازجة كل فجر</div>
-                            </div>
-                        </div>
-
-                        <!-- Custom Coffee Cup SVG Illustration -->
-                        <svg viewBox="0 0 240 240" class="w-64 h-64 drop-shadow-2xl" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Steam -->
-                            <path d="M95 55 Q85 35 100 20" stroke="#FBBF24" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.8">
-                                <animate attributeName="d" values="M95 55 Q85 35 100 20; M95 50 Q105 30 95 15; M95 55 Q85 35 100 20" dur="3s" repeatCount="indefinite"/>
-                            </path>
-                            <path d="M120 50 Q110 30 125 12" stroke="#FBBF24" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.9">
-                                <animate attributeName="d" values="M120 50 Q110 30 125 12; M120 45 Q130 25 118 8; M120 50 Q110 30 125 12" dur="2.5s" repeatCount="indefinite"/>
-                            </path>
-                            <path d="M145 55 Q135 35 150 20" stroke="#FBBF24" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.8">
-                                <animate attributeName="d" values="M145 55 Q135 35 150 20; M145 50 Q155 30 145 15; M145 55 Q135 35 150 20" dur="3.2s" repeatCount="indefinite"/>
-                            </path>
-                            <!-- Saucer -->
-                            <ellipse cx="120" cy="185" rx="85" ry="16" fill="#E2D0B5"/>
-                            <ellipse cx="120" cy="182" rx="65" ry="10" fill="#D0B894"/>
-                            <!-- Cup Handle -->
-                            <path d="M175 95 C205 95, 205 145, 170 145" stroke="#FDFBF7" stroke-width="14" stroke-linecap="round" fill="none"/>
-                            <path d="M175 95 C205 95, 205 145, 170 145" stroke="#EFE5D5" stroke-width="6" stroke-linecap="round" fill="none"/>
-                            <!-- Cup Body -->
-                            <path d="M60 80 L180 80 L170 155 C167 175, 73 175, 70 155 Z" fill="#FDFBF7"/>
-                            <!-- Cup Rim & Latte Art -->
-                            <ellipse cx="120" cy="80" rx="60" ry="16" fill="#EFE5D5"/>
-                            <ellipse cx="120" cy="80" rx="53" ry="13" fill="#6F4E37"/>
-                            <!-- Latte Art Heart -->
-                            <path d="M120 87 C120 87 107 79 107 74 C107 71 110 69 113 69 C116 69 119 71 120 73 C121 71 124 69 127 69 C130 69 133 71 133 74 C133 79 120 87 120 87 Z" fill="#FDFBF7"/>
-                            <!-- Gold Accent Ring -->
-                            <path d="M63 95 Q120 110 177 95" stroke="#D97706" stroke-width="3" fill="none"/>
-                        </svg>
-
-                        <div class="text-center mt-4">
-                            <h3 class="font-heading font-bold text-xl text-cream-50">سبانيش لاتيه أرابيكا</h3>
-                            <p class="text-cream-300 text-sm mt-1">مزيج الإسبريسو الغني مع الحليب المكثف</p>
-                        </div>
-
-                        <!-- Bottom Floating Tag -->
-                        <div class="absolute -bottom-5 -left-4 bg-amber-500 text-espresso-950 px-5 py-2.5 rounded-2xl shadow-xl font-heading font-bold text-sm flex items-center gap-2">
-                            <i class="fa-solid fa-fire"></i>
-                            <span>الأكثر طلباً اليوم</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Interactive Menu Section -->
-    <section id="menu" class="py-20 bg-cream-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Section Header -->
-            <div class="text-center max-w-2xl mx-auto mb-12">
-                <span class="text-amber-600 font-heading font-bold text-sm tracking-wider uppercase">قائمة أرابيكا</span>
-                <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-espresso-950 mt-2">تذوق شغفنا في كل رشفة</h2>
-                <p class="text-espresso-600 mt-3 text-base sm:text-lg">اختر مشروبك المفضل أو حلواك الطازجة وأضفها مباشرة إلى سلة طلباتك</p>
-            </div>
-
-            <!-- Filter Tabs -->
-            <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12" id="menu-filters">
-                <button data-category="all" class="filter-btn active px-6 py-3 rounded-2xl font-heading font-bold text-sm sm:text-base transition-all bg-espresso-900 text-cream-50 shadow-md">
-                    الكل
-                </button>
-                <button data-category="hot-coffee" class="filter-btn px-6 py-3 rounded-2xl font-heading font-bold text-sm sm:text-base transition-all bg-cream-200/70 text-espresso-800 hover:bg-cream-200">
-                    ☕ قهوة مختصة
-                </button>
-                <button data-category="cold-drinks" class="filter-btn px-6 py-3 rounded-2xl font-heading font-bold text-sm sm:text-base transition-all bg-cream-200/70 text-espresso-800 hover:bg-cream-200">
-                    🧊 مشروبات باردة
-                </button>
-                <button data-category="bakery" class="filter-btn px-6 py-3 rounded-2xl font-heading font-bold text-sm sm:text-base transition-all bg-cream-200/70 text-espresso-800 hover:bg-cream-200">
-                    🥐 حلويات ومخبوزات
-                </button>
-            </div>
-
-            <!-- Menu Grid -->
-            <div id="menu-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                <!-- Menu items will be dynamically injected here by JS -->
-            </div>
-        </div>
-    </section>
-
-    <!-- About & Atmosphere Section -->
-    <section id="about" class="py-20 bg-cream-100 border-y border-cream-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <!-- Visual Cards Grid -->
-                <div class="grid grid-cols-2 gap-4 sm:gap-6">
-                    <div class="space-y-4 sm:space-y-6">
-                        <div class="bg-espresso-900 text-cream-50 p-6 sm:p-8 rounded-3xl shadow-lg">
-                            <div class="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-2xl mb-4">
-                                <i class="fa-solid fa-seedling"></i>
-                            </div>
-                            <h3 class="font-heading font-bold text-xl mb-2">حبوب بن مختارة</h3>
-                            <p class="text-cream-200 text-sm leading-relaxed">نستورد أجود محاصيل البن من إثيوبيا، كولومبيا، والبرازيل بمعايير تقييم تتجاوز 86 نقطة.</p>
-                        </div>
-                        <div class="bg-white p-6 sm:p-8 rounded-3xl shadow-md border border-cream-200">
-                            <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center text-2xl mb-4">
-                                <i class="fa-solid fa-wifi"></i>
-                            </div>
-                            <h3 class="font-heading font-bold text-xl text-espresso-950 mb-2">مساحة عمل ملهمة</h3>
-                            <p class="text-espresso-600 text-sm leading-relaxed">إنترنت فائق السرعة ومقاعد مريحة مجهزة بمقابس كهربائية تناسب الدراسة والعمل.</p>
-                        </div>
-                    </div>
-                    <div class="space-y-4 sm:space-y-6 pt-8">
-                        <div class="bg-white p-6 sm:p-8 rounded-3xl shadow-md border border-cream-200">
-                            <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center text-2xl mb-4">
-                                <i class="fa-solid fa-fire-burner"></i>
-                            </div>
-                            <h3 class="font-heading font-bold text-xl text-espresso-950 mb-2">تحميص محلي متقن</h3>
-                            <p class="text-espresso-600 text-sm leading-relaxed">نحمص حبوبنا في محمصتنا الخاصة لضمان إبراز الإيحاءات العطرية الطبيعية لكل محصول.</p>
-                        </div>
-                        <div class="bg-amber-600 text-white p-6 sm:p-8 rounded-3xl shadow-lg">
-                            <div class="w-12 h-12 rounded-2xl bg-white/20 text-white flex items-center justify-center text-2xl mb-4">
-                                <i class="fa-solid fa-couch"></i>
-                            </div>
-                            <h3 class="font-heading font-bold text-xl mb-2">جلسات دافئة</h3>
-                            <p class="text-amber-50 text-sm leading-relaxed">تصميم داخلي يجمع بين الخشب الطبيعي والإضاءة الدافئة ليمنحك تجربة استرخاء لا تُنسى.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Story Content -->
-                <div class="space-y-6">
-                    <span class="text-amber-600 font-heading font-bold text-sm tracking-wider uppercase">قصتنا وأجواؤنا</span>
-                    <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-espresso-950 leading-tight">
-                        أكثر من مجرد مقهى.. إنه ملاذك اليومي للهدوء والإلهام
-                    </h2>
-                    <p class="text-espresso-700 text-lg leading-relaxed">
-                        انطلقت رحلة <strong class="text-espresso-950">مقهى أرابيكا</strong> من شغف عميق بثقافة القهوة المختصة. أردنا خلق مساحة تجمع بين دقة التحضير على يد أمهر الباريستا، وبين الضيافة العربية الأصيلة التي تجعلك تشعر وكأنك في منزلك.
-                    </p>
-                    <p class="text-espresso-600 leading-relaxed">
-                        سواء كنت تبحث عن كوب إسبريسو صباحي يمنحك النشاط، أو جلسة مسائية هادئة مع قطعة كيك الزعفران اللذيذة، فإن أبوابنا مفتوحة دائماً لاستقبالك بابتسامة ورائحة البن الطازج.
-                    </p>
-                    <div class="pt-4 flex flex-wrap gap-6">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-espresso-900 text-amber-400 flex items-center justify-center">
-                                <i class="fa-solid fa-check"></i>
-                            </div>
-                            <span class="font-heading font-bold text-espresso-900">باريستا معتمدون</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-espresso-900 text-amber-400 flex items-center justify-center">
-                                <i class="fa-solid fa-check"></i>
-                            </div>
-                            <span class="font-heading font-bold text-espresso-900">خيارات حليب نباتي</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Table Reservation Section -->
-    <section id="reservation" class="py-20 bg-espresso-950 text-cream-50 relative overflow-hidden">
-        <div class="absolute inset-0 coffee-pattern pointer-events-none"></div>
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="bg-espresso-900/90 backdrop-blur-md border border-espresso-800 rounded-3xl p-6 sm:p-10 lg:p-12 shadow-2xl">
-                <div class="text-center max-w-xl mx-auto mb-10">
-                    <span class="text-amber-400 font-heading font-bold text-sm tracking-wider uppercase">احجز مكانك مسبقاً</span>
-                    <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-cream-50 mt-2">حجز طاولة في أرابيكا</h2>
-                    <p class="text-cream-200 mt-3">تجنب الانتظار واحجز طاولتك المفضلة للاجتماعات، الدراسة، أو اللقاءات الودية.</p>
-                </div>
-
-                <form id="reservation-form" class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <!-- Name -->
-                    <div>
-                        <label for="res-name" class="block text-sm font-medium text-cream-200 mb-2">الاسم الكامل *</label>
-                        <div class="relative">
-                            <span class="absolute inset-y-0 right-0 pr-4 flex items-center text-amber-400">
-                                <i class="fa-regular fa-user"></i>
-                            </span>
-                            <input type="text" id="res-name" required placeholder="مثال: عبدالله محمد" class="w-full pr-11 pl-4 py-3.5 rounded-2xl bg-espresso-950 border border-espresso-700 text-cream-50 placeholder-espresso-500 focus:outline-none focus:border-amber-500 transition-colors">
-                        </div>
-                    </div>
-
-                    <!-- Phone -->
-                    <div>
-                        <label for="res-phone" class="block text-sm font-medium text-cream-200 mb-2">رقم الجوال *</label>
-                        <div class="relative">
-                            <span class="absolute inset-y-0 right-0 pr-4 flex items-center text-amber-400">
-                                <i class="fa-solid fa-phone"></i>
-                            </span>
-                            <input type="tel" id="res-phone" required placeholder="05XXXXXXXX" dir="ltr" class="w-full pr-11 pl-4 py-3.5 rounded-2xl bg-espresso-950 border border-espresso-700 text-cream-50 placeholder-espresso-500 text-right focus:outline-none focus:border-amber-500 transition-colors">
-                        </div>
-                    </div>
-
-                    <!-- Date -->
-                    <div>
-                        <label for="res-date" class="block text-sm font-medium text-cream-200 mb-2">التاريخ *</label>
-                        <input type="date" id="res-date" required class="w-full px-4 py-3.5 rounded-2xl bg-espresso-950 border border-espresso-700 text-cream-50 focus:outline-none focus:border-amber-500 transition-colors">
-                    </div>
-
-                    <!-- Time -->
-                    <div>
-                        <label for="res-time" class="block text-sm font-medium text-cream-200 mb-2">الوقت المفضل *</label>
-                        <select id="res-time" required class="w-full px-4 py-3.5 rounded-2xl bg-espresso-950 border border-espresso-700 text-cream-50 focus:outline-none focus:border-amber-500 transition-colors">
-                            <option value="08:00 ص">08:00 صباحاً</option>
-                            <option value="10:30 ص">10:30 صباحاً</option>
-                            <option value="01:00 م">01:00 ظهراً</option>
-                            <option value="04:30 م">04:30 عصراً</option>
-                            <option value="07:00 م" selected>07:00 مساءً</option>
-                            <option value="09:30 م">09:30 مساءً</option>
-                            <option value="11:00 م">11:00 مساءً</option>
-                        </select>
-                    </div>
-
-                    <!-- Guests Count -->
-                    <div class="sm:col-span-2">
-                        <label for="res-guests" class="block text-sm font-medium text-cream-200 mb-2">عدد الأشخاص *</label>
-                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3" id="guests-selector">
-                            <button type="button" data-guests="1-2 أشخاص" class="guest-btn active py-3 px-4 rounded-xl border border-amber-500 bg-amber-500/20 text-amber-300 font-heading font-bold text-sm transition-all">1 - 2 أشخاص</button>
-                            <button type="button" data-guests="3-4 أشخاص" class="guest-btn py-3 px-4 rounded-xl border border-espresso-700 bg-espresso-950 text-cream-200 hover:border-amber-500/50 font-heading font-bold text-sm transition-all">3 - 4 أشخاص</button>
-                            <button type="button" data-guests="5-6 أشخاص" class="guest-btn py-3 px-4 rounded-xl border border-espresso-700 bg-espresso-950 text-cream-200 hover:border-amber-500/50 font-heading font-bold text-sm transition-all">5 - 6 أشخاص</button>
-                            <button type="button" data-guests="مجموعة (+7)" class="guest-btn py-3 px-4 rounded-xl border border-espresso-700 bg-espresso-950 text-cream-200 hover:border-amber-500/50 font-heading font-bold text-sm transition-all">مجموعة (+7)</button>
-                        </div>
-                        <input type="hidden" id="res-guests" value="1-2 أشخاص">
-                    </div>
-
-                    <!-- Submit Button -->
-                    <div class="sm:col-span-2 pt-2">
-                        <button type="submit" class="w-full py-4 rounded-2xl bg-amber-500 hover:bg-amber-600 text-espresso-950 font-heading font-extrabold text-lg shadow-lg shadow-amber-500/20 transition-all flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-calendar-check"></i>
-                            <span>تأكيد حجز الطاولة</span>
-                        </button>
-                    </div>
-                </form>
-
-                <!-- Reservation Confirmation Banner (Hidden by default) -->
-                <div id="reservation-confirmation" class="hidden mt-8 p-6 rounded-2xl bg-emerald-950/90 border border-emerald-500/50 text-cream-50">
-                    <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-2xl shrink-0">
-                            <i class="fa-solid fa-circle-check"></i>
-                        </div>
-                        <div class="space-y-1">
-                            <h3 class="font-heading font-bold text-xl text-emerald-400">تم استلام حجزك بنجاح!</h3>
-                            <p id="confirmation-details" class="text-cream-100 text-sm sm:text-base leading-relaxed"></p>
-                            <button type="button" id="new-reservation-btn" class="mt-3 inline-block text-xs font-bold text-amber-400 hover:underline">إجراء حجز جديد</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="contact" class="bg-espresso-950 text-cream-200 border-t border-espresso-900 pt-16 pb-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-espresso-800/80">
-                <!-- Brand Info -->
-                <div class="space-y-4">
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-xl bg-amber-500 flex items-center justify-center text-espresso-950">
-                            <i class="fa-solid fa-mug-hot text-lg"></i>
-                        </div>
-                        <span class="font-heading font-extrabold text-2xl text-cream-50">أرابيكا</span>
-                    </div>
-                    <p class="text-cream-300 text-sm leading-relaxed">
-                        وجهتك المثالية لعشاق القهوة المختصة والمخبوزات الطازجة. نجمع بين جودة المحصول ودفء المكان.
-                    </p>
-                    <div class="flex items-center gap-3 pt-2">
-                        <a href="#contact" aria-label="انستغرام" class="w-10 h-10 rounded-xl bg-espresso-900 hover:bg-amber-500 hover:text-espresso-950 flex items-center justify-center transition-colors">
-                            <i class="fa-brands fa-instagram text-lg"></i>
-                        </a>
-                        <a href="#contact" aria-label="منصة إكس" class="w-10 h-10 rounded-xl bg-espresso-900 hover:bg-amber-500 hover:text-espresso-950 flex items-center justify-center transition-colors">
-                            <i class="fa-brands fa-x-twitter text-lg"></i>
-                        </a>
-                        <a href="#contact" aria-label="تيك توك" class="w-10 h-10 rounded-xl bg-espresso-900 hover:bg-amber-500 hover:text-espresso-950 flex items-center justify-center transition-colors">
-                            <i class="fa-brands fa-tiktok text-lg"></i>
-                        </a>
-                        <a href="#contact" aria-label="سناب شات" class="w-10 h-10 rounded-xl bg-espresso-900 hover:bg-amber-500 hover:text-espresso-950 flex items-center justify-center transition-colors">
-                            <i class="fa-brands fa-snapchat text-lg"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Quick Links -->
-                <div>
-                    <h4 class="font-heading font-bold text-lg text-cream-50 mb-4">روابط سريعة</h4>
-                    <ul class="space-y-3 text-sm">
-                        <li><a href="#home" class="hover:text-amber-400 transition-colors">الرئيسية</a></li>
-                        <li><a href="#menu" class="hover:text-amber-400 transition-colors">قائمة المشروبات والحلويات</a></li>
-                        <li><a href="#about" class="hover:text-amber-400 transition-colors">قصتنا وأجواؤنا</a></li>
-                        <li><a href="#reservation" class="hover:text-amber-400 transition-colors">حجز طاولة</a></li>
-                    </ul>
-                </div>
-
-                <!-- Opening Hours -->
-                <div>
-                    <h4 class="font-heading font-bold text-lg text-cream-50 mb-4">ساعات العمل</h4>
-                    <ul class="space-y-3 text-sm">
-                        <li class="flex justify-between">
-                            <span class="text-cream-300">السبت - الأربعاء:</span>
-                            <span class="font-medium text-cream-50">06:30 ص - 12:00 ص</span>
-                        </li>
-                        <li class="flex justify-between">
-                            <span class="text-cream-300">الخميس:</span>
-                            <span class="font-medium text-cream-50">06:30 ص - 02:00 ص</span>
-                        </li>
-                        <li class="flex justify-between">
-                            <span class="text-cream-300">الجمعة:</span>
-                            <span class="font-medium text-cream-50">01:00 م - 02:00 ص</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Contact & Location -->
-                <div>
-                    <h4 class="font-heading font-bold text-lg text-cream-50 mb-4">الموقع والتواصل</h4>
-                    <ul class="space-y-3 text-sm">
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-location-dot text-amber-400 mt-1"></i>
-                            <span>طريق الملك عبدالعزيز، حي الروضة، جدة، المملكة العربية السعودية</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fa-solid fa-phone text-amber-400"></i>
-                            <span dir="ltr">+966 50 123 4567</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fa-solid fa-envelope text-amber-400"></i>
-                            <span>hello@arabica-cafe.sa</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="pt-8 text-center text-xs text-cream-300/70">
-                <p>© 2026 مقهى أرابيكا للقهوة المختصة. جميع الحقوق محفوظة.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Interactive Cart Drawer (Off-canvas) -->
-    <div id="cart-overlay" class="fixed inset-0 bg-espresso-950/70 backdrop-blur-sm z-50 hidden transition-opacity"></div>
-    <aside id="cart-drawer" class="fixed top-0 left-0 h-full w-full sm:w-96 bg-cream-50 text-espresso-950 z-50 shadow-2xl transform -translate-x-full transition-transform duration-300 flex flex-col">
-        <!-- Drawer Header -->
-        <div class="p-6 bg-espresso-900 text-cream-50 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <i class="fa-solid fa-bag-shopping text-amber-400 text-xl"></i>
-                <h3 class="font-heading font-bold text-xl">سلة طلباتك</h3>
-            </div>
-            <button id="close-cart-btn" class="w-9 h-9 rounded-xl bg-espresso-800 hover:bg-espresso-700 text-cream-50 flex items-center justify-center transition-colors" aria-label="إغلاق السلة">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-        </div>
-
-        <!-- Cart Items List -->
-        <div id="cart-items-container" class="flex-1 overflow-y-auto p-6 space-y-4">
-            <!-- Empty state or cart items injected by JS -->
-        </div>
-
-        <!-- Drawer Footer / Checkout -->
-        <div id="cart-footer" class="p-6 bg-cream-100 border-t border-cream-200 space-y-4">
-            <div class="space-y-2 text-sm">
-                <div class="flex justify-between text-espresso-600">
-                    <span>المجموع الفرعي</span>
-                    <span id="cart-subtotal">0 ر.س</span>
-                </div>
-                <div class="flex justify-between text-espresso-600">
-                    <span>ضريبة القيمة المضافة (15%)</span>
-                    <span id="cart-tax">0 ر.س</span>
-                </div>
-                <div class="flex justify-between font-heading font-extrabold text-lg text-espresso-950 pt-2 border-t border-cream-300">
-                    <span>الإجمالي شامل الضريبة</span>
-                    <span id="cart-total" class="text-amber-700">0 ر.س</span>
-                </div>
-            </div>
-
-            <!-- Order Type Toggle -->
-            <div class="grid grid-cols-2 gap-2 p-1 bg-cream-200 rounded-xl text-xs font-heading font-bold">
-                <button type="button" id="type-pickup" class="order-type-btn py-2 rounded-lg bg-espresso-900 text-cream-50 transition-all">استلام من الفرع</button>
-                <button type="button" id="type-table" class="order-type-btn py-2 rounded-lg text-espresso-800 transition-all">تقديم على الطاولة</button>
-            </div>
-
-            <button id="checkout-btn" disabled class="w-full py-3.5 rounded-2xl bg-amber-500 hover:bg-amber-600 disabled:bg-cream-300 disabled:text-espresso-500 disabled:cursor-not-allowed text-espresso-950 font-heading font-extrabold text-base shadow-md transition-all flex items-center justify-center gap-2">
-                <span>إتمام الطلب الآن</span>
-                <i class="fa-solid fa-check-circle"></i>
-            </button>
-        </div>
-    </aside>
-
-    <!-- Toast Notification & Order Modal -->
-    <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
-
-    <!-- Order Success Modal -->
-    <div id="order-modal" class="fixed inset-0 bg-espresso-950/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
-        <div class="bg-cream-50 rounded-3xl max-w-md w-full p-8 text-center shadow-2xl border border-cream-200 space-y-5">
-            <div class="w-20 h-20 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-4xl mx-auto">
-                <i class="fa-solid fa-mug-hot"></i>
-            </div>
-            <h3 class="font-heading font-extrabold text-2xl text-espresso-950">تم إرسال طلبك للباريستا!</h3>
-            <p id="order-modal-msg" class="text-espresso-600 text-sm leading-relaxed">
-                رقم طلبك هو <strong class="text-espresso-950">#408</strong>. سنبدأ بتحضير قهوتك بكل حب وستكون جاهزة خلال دقائق.
-            </p>
-            <button id="close-modal-btn" class="w-full py-3.5 rounded-2xl bg-espresso-900 hover:bg-espresso-800 text-cream-50 font-heading font-bold transition-colors">
-                رائع، شكراً لكم
-            </button>
-        </div>
+  <!-- الشريط العلوي -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="#" class="logo">☕ مقهى <span>أرابيكا</span></a>
+      <nav class="nav-links">
+        <a href="#home">الرئيسية</a>
+        <a href="#menu">القائمة</a>
+        <a href="#about">قصتنا</a>
+        <a href="#booking">احجز طاولة</a>
+      </nav>
+      <button class="cart-btn" id="openCartBtn">
+        🛒 السلة (<span id="cartCount">0</span>)
+      </button>
     </div>
+  </header>
 
-    <!-- JavaScript Logic -->
-    <script>
-        // Menu Data
-        const menuItems = [
-            {
-                id: 1,
-                name: "سبانيش لاتيه",
-                category: "hot-coffee",
-                categoryLabel: "قهوة مختصة",
-                price: 22,
-                description: "جرعة مزدوجة من الإسبريسو الفاخر ممزوجة بالحليب المبخر والحليب المكثف المحلى.",
-                emoji: "☕",
-                bgGradient: "from-amber-100 to-orange-100",
-                badge: "الأكثر مبيعاً"
-            },
-            {
-                id: 2,
-                name: "قهوة مقطرة V60",
-                category: "hot-coffee",
-                categoryLabel: "قهوة مختصة",
-                price: 24,
-                description: "محصول إثيوبي فاخر بإيحاءات الفواكه الاستوائية والياسمين، تُحضر يدوياً أمامك.",
-                emoji: "🫖",
-                bgGradient: "from-stone-200 to-amber-100",
-                badge: "محصول إثيوبي"
-            },
-            {
-                id: 3,
-                name: "فلات وايت",
-                category: "hot-coffee",
-                categoryLabel: "قهوة مختصة",
-                price: 19,
-                description: "توازن مثالي بين الإسبريسو الغني وطبقة رقيقة من الحليب المخملي الناعم.",
-                emoji: "🥛",
-                bgGradient: "from-orange-50 to-amber-100",
-                badge: ""
-            },
-            {
-                id: 4,
-                name: "آيس كراميل ماكياتو",
-                category: "cold-drinks",
-                categoryLabel: "مشروبات باردة",
-                price: 25,
-                description: "حليب بارد مع الفانيليا وقطع الثلج، يعلوه إسبريسو غني وصلصة الكراميل المملح.",
-                emoji: "🧊",
-                bgGradient: "from-amber-100 to-yellow-100",
-                badge: "منعش"
-            },
-            {
-                id: 5,
-                name: "كولد برو أرابيكا",
-                category: "cold-drinks",
-                categoryLabel: "مشروبات باردة",
-                price: 23,
-                description: "قهوة منقوعة على البارد لمدة 18 ساعة لاستخلاص نكهة سلسة وقليلة الحموضة.",
-                emoji: "🥃",
-                bgGradient: "from-stone-200 to-orange-100",
-                badge: ""
-            },
-            {
-                id: 6,
-                name: "موهيتو التوت والنعناع",
-                category: "cold-drinks",
-                categoryLabel: "مشروبات باردة",
-                price: 21,
-                description: "مزيج منعش من التوت البري الطازج، أوراق النعناع، الليمون، والمياه الفوارة.",
-                emoji: "🍹",
-                bgGradient: "from-rose-100 to-amber-50",
-                badge: ""
-            },
-            {
-                id: 7,
-                name: "كرواسون الزبدة الفرنسي",
-                category: "bakery",
-                categoryLabel: "حلويات ومخبوزات",
-                price: 16,
-                description: "مخبوز طازج كل صباح بطبقات هشة ومقرمشة من الزبدة الفرنسية الفاخرة.",
-                emoji: "🥐",
-                bgGradient: "from-amber-100 to-yellow-50",
-                badge: "طازج"
-            },
-            {
-                id: 8,
-                name: "كيكة الزعفران بالحليب",
-                category: "bakery",
-                categoryLabel: "حلويات ومخبوزات",
-                price: 28,
-                description: "كيكة إسفنجية مشربة بحليب الزعفران الفاخر ومغطاة بكريمة مخفوقة خفيفة.",
-                emoji: "🍰",
-                bgGradient: "from-yellow-100 to-orange-100",
-                badge: "توصية الشيف"
-            },
-            {
-                id: 9,
-                name: "سان سيباستيان تشيز كيك",
-                category: "bakery",
-                categoryLabel: "حلويات ومخبوزات",
-                price: 30,
-                description: "تشيز كيك إسباني كريمي بقشرة مكرملة، يُقدم مع صوص الشوكولاتة البلجيكية الساخن.",
-                emoji: "🍮",
-                bgGradient: "from-orange-100 to-stone-200",
-                badge: ""
-            }
-        ];
+  <!-- القسم الرئيسي (Hero) -->
+  <section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1>تذوق فن القهوة المختصة في كل رشفة</h1>
+      <p>نختار أجود حبوب البن المحمصة بعناية لنقدم لك تجربة لا تُنسى في أجواء هادئة ومريحة.</p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-primary">تصفح القائمة</a>
+        <a href="#booking" class="btn btn-outline">احجز طاولتك الآن</a>
+      </div>
+    </div>
+  </section>
 
-        // State
-        let cart = [];
-        let currentFilter = 'all';
-        let orderType = 'استلام من الفرع';
+  <!-- قسم القائمة -->
+  <section id="menu" class="menu-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>قائمتنا المختارة</h2>
+        <p>مشروبات محضرة بشغف وحلويات طازجة يومياً</p>
+      </div>
 
-        // DOM Elements
-        const menuGrid = document.getElementById('menu-grid');
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const cartBtn = document.getElementById('cart-btn');
-        const closeCartBtn = document.getElementById('close-cart-btn');
-        const cartDrawer = document.getElementById('cart-drawer');
-        const cartOverlay = document.getElementById('cart-overlay');
-        const cartItemsContainer = document.getElementById('cart-items-container');
-        const cartBadge = document.getElementById('cart-badge');
-        const cartSubtotalEl = document.getElementById('cart-subtotal');
-        const cartTaxEl = document.getElementById('cart-tax');
-        const cartTotalEl = document.getElementById('cart-total');
-        const checkoutBtn = document.getElementById('checkout-btn');
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
+      <!-- أزرار التصفية -->
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-category="all">الكل</button>
+        <button class="filter-btn" data-category="hot">قهوة ساخنة</button>
+        <button class="filter-btn" data-category="cold">مشروبات باردة</button>
+        <button class="filter-btn" data-category="sweets">حلويات</button>
+      </div>
 
-        // Render Menu Items
-        function renderMenu(category = 'all') {
-            const filtered = category === 'all' 
-                ? menuItems 
-                : menuItems.filter(item => item.category === category);
+      <!-- شبكة المنتجات -->
+      <div class="menu-grid" id="menuGrid">
+        <!-- يتم توليد البطاقات تلقائياً عبر JavaScript -->
+      </div>
+    </div>
+  </section>
 
-            menuGrid.innerHTML = filtered.map(item => `
-                <div class="bg-white rounded-3xl p-5 shadow-sm hover:shadow-xl border border-cream-200 transition-all duration-300 flex flex-col justify-between group">
-                    <div>
-                        <!-- Card Visual Header -->
-                        <div class="relative h-44 rounded-2xl bg-gradient-to-br ${item.bgGradient} flex items-center justify-center mb-5 overflow-hidden">
-                            ${item.badge ? `<span class="absolute top-3 right-3 bg-espresso-950/90 text-amber-400 text-xs font-heading font-bold px-3 py-1 rounded-full">${item.badge}</span>` : ''}
-                            <span class="text-7xl transform group-hover:scale-110 transition-transform duration-300 select-none">${item.emoji}</span>
-                        </div>
-                        
-                        <!-- Category & Price -->
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-xs font-bold text-amber-700 bg-amber-100/70 px-2.5 py-1 rounded-lg">${item.categoryLabel}</span>
-                            <span class="font-heading font-extrabold text-xl text-espresso-950">${item.price} <span class="text-xs font-normal text-espresso-600">ر.س</span></span>
-                        </div>
+  <!-- قسم قصتنا -->
+  <section id="about" class="about-section">
+    <div class="container about-grid">
+      <div class="about-text">
+        <h2>شغفنا بالقهوة منذ البداية</h2>
+        <p>في <strong>مقهى أرابيكا</strong>، نؤمن بأن كوب القهوة الجيد هو بداية ليوم رائع. نستورد حبوبنا من أفضل المزارع العالمية ونقوم بتحميصها محلياً لضمان أعلى درجات النكهة والطزاجة.</p>
+        <ul class="features-list">
+          <li>✓ حبوب بن عضوية محمصة طازجة أسبوعياً</li>
+          <li>✓ جلسات هادئة مع إنترنت فائق السرعة للعمل والدراسة</li>
+          <li>✓ حلويات ومخبوزات تُحضر في مطبخنا كل صباح</li>
+        </ul>
+      </div>
+      <div class="about-card">
+        <h3>ساعات العمل</h3>
+        <p><strong>الأحد - الخميس:</strong> 7:00 صباحاً – 12:00 منتصف الليل</p>
+        <p><strong>الجمعة - السبت:</strong> 8:00 صباحاً – 2:00 صباحاً</p>
+        <hr />
+        <h3>الموقع</h3>
+        <p>شارع التحلية، حي الروضة، جدة</p>
+      </div>
+    </div>
+  </section>
 
-                        <!-- Title & Description -->
-                        <h3 class="font-heading font-bold text-xl text-espresso-950 mb-2">${item.name}</h3>
-                        <p class="text-espresso-600 text-sm leading-relaxed mb-6">${item.description}</p>
-                    </div>
+  <!-- قسم حجز الطاولات -->
+  <section id="booking" class="booking-section">
+    <div class="container">
+      <div class="booking-box">
+        <h2>احجز طاولتك مسبقاً</h2>
+        <p>اضمن مكانك المفضل في المقهى قبل وصولك</p>
+        <form id="bookingForm" class="booking-form">
+          <div class="form-group">
+            <label>الاسم الكامل</label>
+            <input type="text" id="guestName" required placeholder="أدخل اسمك" />
+          </div>
+          <div class="form-group">
+            <label>رقم الجوال</label>
+            <input type="tel" id="guestPhone" required placeholder="05xxxxxxxx" />
+          </div>
+          <div class="form-group">
+            <label>التاريخ</label>
+            <input type="date" id="bookingDate" required />
+          </div>
+          <div class="form-group">
+            <label>الوقت</label>
+            <input type="time" id="bookingTime" required />
+          </div>
+          <div class="form-group">
+            <label>عدد الأشخاص</label>
+            <select id="guestCount">
+              <option value="1">شخص واحد</option>
+              <option value="2" selected>شخصان</option>
+              <option value="4">3 - 4 أشخاص</option>
+              <option value="6">مجموعة (5+ أشخاص)</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary full-width">تأكيد الحجز</button>
+        </form>
+        <div id="bookingMessage" class="alert-message hidden"></div>
+      </div>
+    </div>
+  </section>
 
-                    <!-- Add to Cart Button -->
-                    <button onclick="addToCart(${item.id})" class="w-full py-3.5 px-4 rounded-2xl bg-cream-100 hover:bg-espresso-900 text-espresso-950 hover:text-cream-50 font-heading font-bold text-sm transition-colors flex items-center justify-center gap-2 border border-cream-300 hover:border-espresso-900">
-                        <i class="fa-solid fa-plus text-amber-600 group-hover:text-amber-400"></i>
-                        <span>أضف للسلة</span>
-                    </button>
-                </div>
-            `).join('');
-        }
+  <!-- التذييل -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 مقهى أرابيكا. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
 
-        // Filter Event Listeners
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterBtns.forEach(b => {
-                    b.classList.remove('bg-espresso-900', 'text-cream-50', 'shadow-md');
-                    b.classList.add('bg-cream-200/70', 'text-espresso-800');
-                });
-                btn.classList.remove('bg-cream-200/70', 'text-espresso-800');
-                btn.classList.add('bg-espresso-900', 'text-cream-50', 'shadow-md');
-                
-                currentFilter = btn.dataset.category;
-                renderMenu(currentFilter);
-            });
-        });
+  <!-- نافذة السلة الجانبية (Modal) -->
+  <div class="cart-modal" id="cartModal">
+    <div class="cart-content">
+      <div class="cart-header">
+        <h3>سلة طلباتك</h3>
+        <button class="close-btn" id="closeCartBtn">✕</button>
+      </div>
+      <div class="cart-items" id="cartItems">
+        <p class="empty-msg">السلة فارغة حالياً</p>
+      </div>
+      <div class="cart-footer">
+        <div class="total-row">
+          <span>الإجمالي:</span>
+          <span id="cartTotal">0 ر.س</span>
+        </div>
+        <button class="btn btn-primary full-width" id="checkoutBtn">إتمام الطلب</button>
+      </div>
+    </div>
+  </div>
 
-        // Cart Functions
-        function addToCart(id) {
-            const item = menuItems.find(i => i.id === id);
-            if (!item) return;
-
-            const existing = cart.find(c => c.id === id);
-            if (existing) {
-                existing.qty += 1;
-            } else {
-                cart.push({ ...item, qty: 1 });
-            }
-
-            updateCartUI();
-            showToast(`تمت إضافة "${item.name}" إلى السلة`);
-        }
-
-        function updateQuantity(id, delta) {
-            const index = cart.findIndex(c => c.id === id);
-            if (index === -1) return;
-
-            cart[index].qty += delta;
-            if (cart[index].qty <= 0) {
-                cart.splice(index, 1);
-            }
-            updateCartUI();
-        }
-
-        function updateCartUI() {
-            const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
-            cartBadge.textContent = totalItems;
-
-            if (cart.length === 0) {
-                cartItemsContainer.innerHTML = `
-                    <div class="h-full flex flex-col items-center justify-center text-center py-12 space-y-4">
-                        <div class="w-20 h-20 rounded-full bg-cream-200 text-espresso-400 flex items-center justify-center text-3xl">
-                            <i class="fa-solid fa-mug-saucer"></i>
-                        </div>
-                        <h4 class="font-heading font-bold text-lg text-espresso-800">سلتك فارغة حالياً</h4>
-                        <p class="text-sm text-espresso-500 max-w-xs">استكشف قائمتنا الغنية بالقهوة المختصة والمخبوزات الطازجة وأضف ما تشتهيه.</p>
-                    </div>
-                `;
-                checkoutBtn.disabled = true;
-            } else {
-                cartItemsContainer.innerHTML = cart.map(item => `
-                    <div class="flex items-center justify-between gap-3 bg-white p-3.5 rounded-2xl border border-cream-200 shadow-sm">
-                        <div class="flex items-center gap-3">
-                            <div class="w-12 h-12 rounded-xl bg-cream-100 flex items-center justify-center text-2xl shrink-0">
-                                ${item.emoji}
-                            </div>
-                            <div>
-                                <h4 class="font-heading font-bold text-sm text-espresso-950">${item.name}</h4>
-                                <span class="text-xs font-bold text-amber-700">${item.price * item.qty} ر.س</span>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-2 bg-cream-100 rounded-xl p-1 border border-cream-200">
-                            <button onclick="updateQuantity(${item.id}, 1)" class="w-7 h-7 rounded-lg bg-white hover:bg-espresso-900 hover:text-white text-espresso-900 flex items-center justify-center text-xs transition-colors" aria-label="زيادة الكمية">
-                                <i class="fa-solid fa-plus"></i>
-                            </button>
-                            <span class="font-heading font-bold text-sm w-5 text-center">${item.qty}</span>
-                            <button onclick="updateQuantity(${item.id}, -1)" class="w-7 h-7 rounded-lg bg-white hover:bg-rose-600 hover:text-white text-espresso-900 flex items-center justify-center text-xs transition-colors" aria-label="إنقاص الكمية">
-                                <i class="fa-solid fa-minus"></i>
-                            </button>
-                        </div>
-                    </div>
-                `).join('');
-                checkoutBtn.disabled = false;
-            }
-
-            // Calculate Totals
-            const totalWithTax = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
-            const subtotal = +(totalWithTax / 1.15).toFixed(2);
-            const tax = +(totalWithTax - subtotal).toFixed(2);
-
-            cartSubtotalEl.textContent = `${subtotal} ر.س`;
-            cartTaxEl.textContent = `${tax} ر.س`;
-            cartTotalEl.textContent = `${totalWithTax} ر.س`;
-        }
-
-        // Toggle Cart Drawer
-        function openCart() {
-            cartOverlay.classList.remove('hidden');
-            cartDrawer.classList.remove('-translate-x-full');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeCart() {
-            cartOverlay.classList.add('hidden');
-            cartDrawer.classList.add('-translate-x-full');
-            document.body.style.overflow = '';
-        }
-
-        cartBtn.addEventListener('click', openCart);
-        closeCartBtn.addEventListener('click', closeCart);
-        cartOverlay.addEventListener('click', closeCart);
-
-        // Order Type Switcher
-        const orderTypeBtns = document.querySelectorAll('.order-type-btn');
-        orderTypeBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                orderTypeBtns.forEach(b => {
-                    b.classList.remove('bg-espresso-900', 'text-cream-50');
-                    b.classList.add('text-espresso-800');
-                });
-                btn.classList.add('bg-espresso-900', 'text-cream-50');
-                btn.classList.remove('text-espresso-800');
-                orderType = btn.textContent;
-            });
-        });
-
-        // Checkout Action
-        const orderModal = document.getElementById('order-modal');
-        const orderModalMsg = document.getElementById('order-modal-msg');
-        const closeModalBtn = document.getElementById('close-modal-btn');
-
-        checkoutBtn.addEventListener('click', () => {
-            if (cart.length === 0) return;
-            const randomOrderNum = Math.floor(100 + Math.random() * 900);
-            const totalAmount = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
-
-            orderModalMsg.innerHTML = `
-                رقم طلبك هو <strong class="text-espresso-950 font-heading">#${randomOrderNum}</strong> (${orderType}).<br>
-                الإجمالي المدفوع: <strong class="text-amber-700">${totalAmount} ر.س</strong>.<br>
-                سنبدأ بتحضير قهوتك بكل حب وستكون جاهزة خلال دقائق!
-            `;
-
-            closeCart();
-            orderModal.classList.remove('hidden');
-            orderModal.classList.add('flex');
-
-            // Reset Cart
-            cart = [];
-            updateCartUI();
-        });
-
-        closeModalBtn.addEventListener('click', () => {
-            orderModal.classList.add('hidden');
-            orderModal.classList.remove('flex');
-        });
-
-        // Toast Notification Helper
-        function showToast(message) {
-            const toast = document.createElement('div');
-            toast.className = 'bg-espresso-900 text-cream-50 px-5 py-3.5 rounded-2xl shadow-xl border border-espresso-700 flex items-center gap-3 text-sm font-medium transform transition-all duration-300 translate-y-2 opacity-0';
-            toast.innerHTML = `
-                <i class="fa-solid fa-circle-check text-amber-400"></i>
-                <span>${message}</span>
-            `;
-            const container = document.getElementById('toast-container');
-            container.appendChild(toast);
-
-            requestAnimationFrame(() => {
-                toast.classList.remove('translate-y-2', 'opacity-0');
-            });
-
-            setTimeout(() => {
-                toast.classList.add('opacity-0', 'translate-y-2');
-                setTimeout(() => toast.remove(), 300);
-            }, 2500);
-        }
-
-        // Mobile Navigation Toggle
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        document.querySelectorAll('.mobile-link').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-
-        // Table Reservation Form Logic
-        const resDateInput = document.getElementById('res-date');
-        const today = new Date().toISOString().split('T')[0];
-        resDateInput.min = today;
-        resDateInput.value = today;
-
-        const guestBtns = document.querySelectorAll('.guest-btn');
-        const resGuestsInput = document.getElementById('res-guests');
-
-        guestBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                guestBtns.forEach(b => {
-                    b.classList.remove('active', 'border-amber-500', 'bg-amber-500/20', 'text-amber-300');
-                    b.classList.add('border-espresso-700', 'bg-espresso-950', 'text-cream-200');
-                });
-                btn.classList.add('active', 'border-amber-500', 'bg-amber-500/20', 'text-amber-300');
-                btn.classList.remove('border-espresso-700', 'bg-espresso-950', 'text-cream-200');
-                resGuestsInput.value = btn.dataset.guests;
-            });
-        });
-
-        const reservationForm = document.getElementById('reservation-form');
-        const reservationConfirmation = document.getElementById('reservation-confirmation');
-        const confirmationDetails = document.getElementById('confirmation-details');
-        const newReservationBtn = document.getElementById('new-reservation-btn');
-
-        reservationForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const name = document.getElementById('res-name').value.trim();
-            const phone = document.getElementById('res-phone').value.trim();
-            const date = document.getElementById('res-date').value;
-            const time = document.getElementById('res-time').value;
-            const guests = resGuestsInput.value;
-
-            confirmationDetails.innerHTML = `
-                أهلاً بك <strong>${name}</strong>، تم تأكيد حجز طاولة لـ <strong>${guests}</strong> يوم <strong>${date}</strong> الساعة <strong>${time}</strong>. 
-                تم إرسال تفاصيل الحجز إلى الرقم <span dir="ltr" class="font-bold text-amber-300">${phone}</span>.
-            `;
-
-            reservationForm.classList.add('hidden');
-            reservationConfirmation.classList.remove('hidden');
-            showToast('تم تأكيد حجز طاولتك بنجاح!');
-        });
-
-        newReservationBtn.addEventListener('click', () => {
-            reservationForm.reset();
-            resDateInput.value = today;
-            reservationConfirmation.classList.add('hidden');
-            reservationForm.classList.remove('hidden');
-        });
-
-        // Initialize Page
-        renderMenu();
-        updateCartUI();
-    </script>
-    <script src="JS/one.js"> 
+  <script src="Js/script.js"></script>
 </body>
 </html>
