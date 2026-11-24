@@ -54,7 +54,7 @@ const menuItems = [
     category: "hot",
     price: 16,
     desc: "مخبوز طازجاً ومقرمشاً ومحشو بكريمة اللوز الغنية.",
-    img: "https://al-ain.com/article/most-expensive-cappuccino-in-the-world-sold"
+    img: "https://images.openai.com/static-rsc-4/TqQmQ157wyeMJaPG2NUY5c_O0JqGApFZUdnau2JyArJ95UtcPfAuvHLq7nhSv1Pq2bjQYVHHHsmPv05oaMN8VUW-4wFhSLltyd4ePet0lKQ_igqtF70-p3A21Aex1skRLv-5qr0JykGgGyuN5USJuYTHR9oc1ClqzStCMV2yyA6lO19gG-Gs-u0m6_UeWB1y?purpose=fullsize"
   },
   {
     id: 8,
@@ -62,15 +62,14 @@ const menuItems = [
     category: "hot",
     price: 16,
     desc: "مخبوز طازجاً ومقرمشاً ومحشو بكريمة اللوز الغنية.",
-    img: "https://www.onflora.net/shop/%D8%A8%D8%A7%D8%B1%D9%86%D8%B2-%D8%A7%D9%85%D8%B1%D9%8A%D9%83%D8%A7%D9%86%D9%88-%D8%B3%D8%A7%D8%AE%D9%86-%D9%83%D8%A8%D9%8A%D8%B1-%D9%85%D9%86-%D8%A8%D8%A7%D8%B1%D9%86%D8%B2-692?srsltid=AYCX9vIIGkZrEAfGuy9JaEBnS-pJL72LeY61kymE03EDXmM7poe9PnGl"
-  },
+img:"https://images.openai.com/static-rsc-4/_Mip4ta2h2AwgP9GZOw6tpTnjmVtmi3gFW6fgAqvVATzZC7a47nRbBiwHpFgcTAxPtC5wyeHnDaXDIWivTkFOu6p1htn9hJ_GWknIHu-iFjKVyfhjaaHdLt0aL4mqox6Y9-5BH3gVxfDyvOsdMUZbukPxkRmDGC0S2pxQuR5Me5lTLHt2d6bjCfSaXVImtjB?purpose=fullsize"  },
   {
     id: 9,
     name: "تركي ساخن",
     category: "hot",
     price: 16,
     desc: "مخبوز طازجاً ومقرمشاً ومحشو بكريمة اللوز الغنية.",
-    img: "https://bashasaray.com/the-most-famous-turkish-drinks-video/?srsltid=AYCX9vKvtZI3TMluF-uVgv1U0DEhw_eZoU0oozCOpKP562_RXk_KJ6I5"
+    img:""
   },
   {
     id: 10,
@@ -86,16 +85,15 @@ const menuItems = [
     category: "hot",
     price: 16,
     desc: "مخبوز طازجاً ومقرمشاً ومحشو بكريمة اللوز الغنية.",
-    img: "https://bashasaray.com/the-most-famous-turkish-drinks-video/?srsltid=AYCX9vKvtZI3TMluF-uVgv1U0DEhw_eZoU0oozCOpKP562_RXk_KJ6I5"
-  },
+img:"https://images.openai.com/static-rsc-4/2BiPb_ijCMmFJCSkXJ8GosEBlTv505GovEcbV7HHTp_I3si9Eq_3TDas3tSrLgfvTVs4hBM4da3HTfb0QVb2F7a2IzrcecrVR-9937CudVa4IPuLayHmiBbGO1B74HF1QkT6c1pOf3SLwhfUBhC1xelN3T__H9Marzz0KZGAK2LXlOO9kEOb-gbnkp8Yzw9q?purpose=fullsize"
+   },
   {
     id: 10,
     name: "لاتية بالكراميل",
     category: "hot",
     price: 16,
     desc: "مخبوز طازجاً ومقرمشاً ومحشو بكريمة اللوز الغنية.",
-    img: "https://www.google.com/imgres?q=%D9%83%D8%B1%D8%A7%D9%85%D9%8A%D9%84%20%D9%84%D8%A7%D8%AA%D9%8A%D9%87%20%D8%AD%D8%A7%D8%B1&imgurl=https%3A%2F%2Fksacdn4.mnasaticdn.com%2Fuploads%2Fproduct_image%2F12999%2Fproduct_01603798532_thumb.jpg&imgrefurl=https%3A%2F%2Flatifacafe.com%2Far%2Fproduct%2F195931-hot-caramel-latte&docid=5OC_qS_IUYYkBM&tbnid=RXufQ3_IycBtMM&vet=12ahUKEwiIsOqkqaGYAxUehv0HHSGrKiAQnPAOegQIQRAA..i&w=400&h=400&hcb=2&ved=2ahUKEwiIsOqkqaGYAxUehv0HHSGrKiAQnPAOegQIQRAA"
-  }
+img:"https://images.openai.com/static-rsc-4/szjWy_OFmcn6FGTdCiPbzGET4ZywpcE963eokxvHEIhaI7zJB9aeaLTeY9B5reOIrDHM5wOhaFcDjVvGZQH3ITjvNcZIjOsdDNUzgo2_TRRwfT0QAOaDJ2ht0OcDTTl2_b-_A4JoVxLlhyU9zF3sDsF8WvnK-SpN7FNlg4YTRdhv_PPhSMMRnvGoTx5_aONF?purpose=fullsize"  }
 ];
 
 let cart = [];
