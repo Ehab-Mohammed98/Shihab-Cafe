@@ -47,6 +47,38 @@ const menuItems = [
     price: 16,
     desc: "مخبوز طازجاً ومقرمشاً ومحشو بكريمة اللوز الغنية.",
     img: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&q=80"
+  },
+    {
+    id: 7,
+    name: "كابيتشينو كلاسيك",
+    category: "hot",
+    price: 16,
+    desc: "مخبوز طازجاً ومقرمشاً ومحشو بكريمة اللوز الغنية.",
+    img: "https://al-ain.com/article/most-expensive-cappuccino-in-the-world-sold"
+  },
+  {
+    id: 8,
+    name: "امريكانو ساخن",
+    category: "hot",
+    price: 16,
+    desc: "مخبوز طازجاً ومقرمشاً ومحشو بكريمة اللوز الغنية.",
+    img: "https://www.onflora.net/shop/%D8%A8%D8%A7%D8%B1%D9%86%D8%B2-%D8%A7%D9%85%D8%B1%D9%8A%D9%83%D8%A7%D9%86%D9%88-%D8%B3%D8%A7%D8%AE%D9%86-%D9%83%D8%A8%D9%8A%D8%B1-%D9%85%D9%86-%D8%A8%D8%A7%D8%B1%D9%86%D8%B2-692?srsltid=AYCX9vIIGkZrEAfGuy9JaEBnS-pJL72LeY61kymE03EDXmM7poe9PnGl"
+  },
+  {
+    id: 9,
+    name: "تركي ساخن",
+    category: "hot",
+    price: 16,
+    desc: "مخبوز طازجاً ومقرمشاً ومحشو بكريمة اللوز الغنية.",
+    img: "https://bashasaray.com/the-most-famous-turkish-drinks-video/?srsltid=AYCX9vKvtZI3TMluF-uVgv1U0DEhw_eZoU0oozCOpKP562_RXk_KJ6I5"
+  },
+  {
+    id: 10,
+    name: "لاتية بالكراميل",
+    category: "hot",
+    price: 16,
+    desc: "مخبوز طازجاً ومقرمشاً ومحشو بكريمة اللوز الغنية.",
+    img: "https://www.google.com/imgres?q=%D9%83%D8%B1%D8%A7%D9%85%D9%8A%D9%84%20%D9%84%D8%A7%D8%AA%D9%8A%D9%87%20%D8%AD%D8%A7%D8%B1&imgurl=https%3A%2F%2Fksacdn4.mnasaticdn.com%2Fuploads%2Fproduct_image%2F12999%2Fproduct_01603798532_thumb.jpg&imgrefurl=https%3A%2F%2Flatifacafe.com%2Far%2Fproduct%2F195931-hot-caramel-latte&docid=5OC_qS_IUYYkBM&tbnid=RXufQ3_IycBtMM&vet=12ahUKEwiIsOqkqaGYAxUehv0HHSGrKiAQnPAOegQIQRAA..i&w=400&h=400&hcb=2&ved=2ahUKEwiIsOqkqaGYAxUehv0HHSGrKiAQnPAOegQIQRAA"
   }
 ];
 
