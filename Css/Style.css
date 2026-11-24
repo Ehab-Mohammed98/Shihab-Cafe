@@ -68,6 +68,7 @@
     padding-block: 0.35rem;
     position: relative;
     transition: color 0.2s ease;
+    text-decoration: none;
 }
 
 .nav-links a:hover,
