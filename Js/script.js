@@ -214,7 +214,7 @@ if (cartModal) {
 
 // إتمام الطلب
 // ضع رقم واتساب المقهى هنا (مثال للسعودية: 9665xxxxxxxx)
-const CAFE_WHATSAPP = "966500000000";
+const CAFE_WHATSAPP = "+966569060751";
 
 if (checkoutBtn) {
   checkoutBtn.addEventListener("click", () => {
