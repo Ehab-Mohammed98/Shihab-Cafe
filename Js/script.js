@@ -52,7 +52,7 @@ const menuItems = [
     id: 7,
     name: "كابيتشينو كلاسيك",
     category: "hot",
-    price: 16,
+    price: 20,
     desc: "مخبوز طازجاً ومقرمشاً ومحشو بكريمة اللوز الغنية.",
     img: "https://images.openai.com/static-rsc-4/TqQmQ157wyeMJaPG2NUY5c_O0JqGApFZUdnau2JyArJ95UtcPfAuvHLq7nhSv1Pq2bjQYVHHHsmPv05oaMN8VUW-4wFhSLltyd4ePet0lKQ_igqtF70-p3A21Aex1skRLv-5qr0JykGgGyuN5USJuYTHR9oc1ClqzStCMV2yyA6lO19gG-Gs-u0m6_UeWB1y?purpose=fullsize"
   },
@@ -60,27 +60,27 @@ const menuItems = [
     id: 8,
     name: "امريكانو ساخن",
     category: "hot",
-    price: 16,
+    price: 17.5,
     desc: "مخبوز طازجاً ومقرمشاً ومحشو بكريمة اللوز الغنية.",
 img:"https://images.openai.com/static-rsc-4/_Mip4ta2h2AwgP9GZOw6tpTnjmVtmi3gFW6fgAqvVATzZC7a47nRbBiwHpFgcTAxPtC5wyeHnDaXDIWivTkFOu6p1htn9hJ_GWknIHu-iFjKVyfhjaaHdLt0aL4mqox6Y9-5BH3gVxfDyvOsdMUZbukPxkRmDGC0S2pxQuR5Me5lTLHt2d6bjCfSaXVImtjB?purpose=fullsize"  },
   {
     id: 9,
-    name: "تركي ساخن",
-    category: "hot",
-    price: 16,
+    name: "تشيز كيك سان سيباستيان",
+    category: "sweet",
+    price: 14.5,
     desc: "مخبوز طازجاً ومقرمشاً ومحشو بكريمة اللوز الغنية.",
-    img:""
+    img:"https://images.openai.com/static-rsc-4/isiggbtqq0RLlstMSyaR1TMlyHbtwkys10-rXzqw6oliC7brsv8qZpdfuxIDx4nGbP8ecZWA9gfJhIz7m1oQkLYdrSbW5-hfzTTOnj-JalBPQy0vJBWBvXx54BhJIhsgoO13JSyGgnFCAJzDDXtLpVbH_9tvtSqlSIlr0JeV76vgTFjjk9YyxxeqtXjxj3JD?purpose=fullsize"
   },
   {
     id: 10,
-    name: "لاتية بالكراميل",
-    category: "hot",
-    price: 16,
+    name: "تشيز كيك كلاسيك ",
+    category: "sweet",
+    price: 25,
     desc: "مخبوز طازجاً ومقرمشاً ومحشو بكريمة اللوز الغنية.",
-    img: "https://www.google.com/imgres?q=%D9%83%D8%B1%D8%A7%D9%85%D9%8A%D9%84%20%D9%84%D8%A7%D8%AA%D9%8A%D9%87%20%D8%AD%D8%A7%D8%B1&imgurl=https%3A%2F%2Fksacdn4.mnasaticdn.com%2Fuploads%2Fproduct_image%2F12999%2Fproduct_01603798532_thumb.jpg&imgrefurl=https%3A%2F%2Flatifacafe.com%2Far%2Fproduct%2F195931-hot-caramel-latte&docid=5OC_qS_IUYYkBM&tbnid=RXufQ3_IycBtMM&vet=12ahUKEwiIsOqkqaGYAxUehv0HHSGrKiAQnPAOegQIQRAA..i&w=400&h=400&hcb=2&ved=2ahUKEwiIsOqkqaGYAxUehv0HHSGrKiAQnPAOegQIQRAA"
+img:"https://images.openai.com/static-rsc-4/YfWZIlCJojnumPETOyOAQ3UgAoqIWArDDZAK7YJLS-ixoNcK_ICeUER2PFvvgofHucYKqB4yIlBvKJ8tw3YhmvwIE6oMhBElPuFeQlrRVCbs_Xq4k-AN_aME4ToGy0OiuTgYScKAIk3Wr6bKmGtJasH3zuwit1vrbOKssf7_kNP2NRI7U_M2Spa7IBh63ugZ?purpose=fullsize"
   },
    {
-    id: 9,
+    id: 11,
     name: "تركي ساخن",
     category: "hot",
     price: 16,
@@ -88,7 +88,7 @@ img:"https://images.openai.com/static-rsc-4/_Mip4ta2h2AwgP9GZOw6tpTnjmVtmi3gFW6f
 img:"https://images.openai.com/static-rsc-4/2BiPb_ijCMmFJCSkXJ8GosEBlTv505GovEcbV7HHTp_I3si9Eq_3TDas3tSrLgfvTVs4hBM4da3HTfb0QVb2F7a2IzrcecrVR-9937CudVa4IPuLayHmiBbGO1B74HF1QkT6c1pOf3SLwhfUBhC1xelN3T__H9Marzz0KZGAK2LXlOO9kEOb-gbnkp8Yzw9q?purpose=fullsize"
    },
   {
-    id: 10,
+    id: 12,
     name: "لاتية بالكراميل",
     category: "hot",
     price: 16,
