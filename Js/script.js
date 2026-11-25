@@ -66,7 +66,7 @@ img:"https://images.openai.com/static-rsc-4/_Mip4ta2h2AwgP9GZOw6tpTnjmVtmi3gFW6f
   {
     id: 9,
     name: "تشيز كيك سان سيباستيان",
-    category: "sweet",
+    category: "sweets",
     price: 14.5,
     desc: "مخبوز طازجاً ومقرمشاً ومحشو بكريمة اللوز الغنية.",
     img:"https://images.openai.com/static-rsc-4/isiggbtqq0RLlstMSyaR1TMlyHbtwkys10-rXzqw6oliC7brsv8qZpdfuxIDx4nGbP8ecZWA9gfJhIz7m1oQkLYdrSbW5-hfzTTOnj-JalBPQy0vJBWBvXx54BhJIhsgoO13JSyGgnFCAJzDDXtLpVbH_9tvtSqlSIlr0JeV76vgTFjjk9YyxxeqtXjxj3JD?purpose=fullsize"
@@ -74,7 +74,7 @@ img:"https://images.openai.com/static-rsc-4/_Mip4ta2h2AwgP9GZOw6tpTnjmVtmi3gFW6f
   {
     id: 10,
     name: "تشيز كيك كلاسيك ",
-    category: "sweet",
+    category: "sweets",
     price: 25,
     desc: "مخبوز طازجاً ومقرمشاً ومحشو بكريمة اللوز الغنية.",
 img:"https://images.openai.com/static-rsc-4/YfWZIlCJojnumPETOyOAQ3UgAoqIWArDDZAK7YJLS-ixoNcK_ICeUER2PFvvgofHucYKqB4yIlBvKJ8tw3YhmvwIE6oMhBElPuFeQlrRVCbs_Xq4k-AN_aME4ToGy0OiuTgYScKAIk3Wr6bKmGtJasH3zuwit1vrbOKssf7_kNP2NRI7U_M2Spa7IBh63ugZ?purpose=fullsize"
