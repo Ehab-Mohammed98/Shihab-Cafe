@@ -95,6 +95,22 @@ const menuItems = [
     price: 16,
     desc: "قهوة لاتيه دافئة ممزوجة بصوص الكراميل الغني.",
     img: "https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&w=600&q=80"
+  },
+    {
+    id: 13,
+    name: "آيس أمريكانو",
+    category: "hot",
+    price: 16,
+    desc: "قهوة مطحونة ناعماً تُحضّر على نار هادئة بوجه غني.",
+    img: "https://images.openai.com/static-rsc-4/oPQAW8xIvEcE8YFv3zOYXTlBMSlGoUF-VvCt-j0ubRVjB6GmC8gib3sIyAcJ6Q5Cx02cYNr6WPrAxLEGATGxEyVuD5k71sV7BB-6m8x39srhy9RjSqMrdiW5s_6hlPsBravExY5opA-xp9lyiMTFic7pPNpNvI2HvkGfXYkyyI30xAHyjt8__dY-NEGMzL0w?purpose=fullsize"
+  },
+  {
+    id: 14,
+    name: "فرابتشينو الكراميل",
+    category: "hot",
+    price: 16,
+    desc: "قهوة لاتيه دافئة ممزوجة بصوص الكراميل الغني.",
+    img:"https://images.openai.com/static-rsc-4/zGS33tY_IbUmnxIkGXn_z2mAjRlxqXBoD1cIBLH401dZeGMqYkKRAFxNykklo2ezDSvYEXPc64cRPO5BT7BgzM5t3pZnfVT09nBJn_bBkemGowULxRyInpambEpZvsie6etE87ieLQj1gtjRpG1-TJG8x8ht1fHbwmQXvguFHBJCKXRppXWYl32Z9ZwqDbfP?purpose=fullsize"
   }
 ];
 
