@@ -241,9 +241,32 @@ if (checkoutBtn) {
                     `*الإجمالي:* ${totalPrice} ر.س`;
 
     // 3. عرض رقم الطلب للزبون وتجهيز رابط الواتساب
-    const orderNumEl = document.getElementById("orderNumberDisplay");
-    const waLinkEl = document.getElementById("whatsappOrderLink");
-    const receiptEl = document.getElementById("orderReceipt");
+   const cartModal = document.getElementById("cartModal");
+const openCartBtn = document.getElementById("openCartBtn");
+const closeCartBtn = document.getElementById("closeCartBtn");
+
+if (openCartBtn && cartModal) {
+  openCartBtn.addEventListener("click", () => {
+    cartModal.style.display = "flex";
+    cartModal.classList.add("open");
+  });
+}
+
+function closeCart() {
+  if (!cartModal) return;
+  cartModal.style.display = "none";
+  cartModal.classList.remove("open");
+}
+
+if (closeCartBtn) {
+  closeCartBtn.addEventListener("click", closeCart);
+}
+
+if (cartModal) {
+  cartModal.addEventListener("click", (e) => {
+    if (e.target === cartModal) closeCart();
+  });
+}
 
     if (orderNumEl && waLinkEl && receiptEl) {
       orderNumEl.textContent = orderNumber;
