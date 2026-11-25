@@ -48,52 +48,54 @@ const menuItems = [
     desc: "مخبوز طازجاً ومقرمشاً ومحشو بكريمة اللوز الغنية.",
     img: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&q=80"
   },
-    {
+  {
     id: 7,
-    name: "كابيتشينو كلاسيك",
+    name: "كابتشينو كلاسيك",
     category: "hot",
     price: 20,
-    desc: "مخبوز طازجاً ومقرمشاً ومحشو بكريمة اللوز الغنية.",
-    img: "https://images.openai.com/static-rsc-4/TqQmQ157wyeMJaPG2NUY5c_O0JqGApFZUdnau2JyArJ95UtcPfAuvHLq7nhSv1Pq2bjQYVHHHsmPv05oaMN8VUW-4wFhSLltyd4ePet0lKQ_igqtF70-p3A21Aex1skRLv-5qr0JykGgGyuN5USJuYTHR9oc1ClqzStCMV2yyA6lO19gG-Gs-u0m6_UeWB1y?purpose=fullsize"
+    desc: "توازن مثالي بين الإسبريسو والحليب المبخر ورغوة الحليب الكثيفة.",
+    img: "https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=600&q=80"
   },
   {
     id: 8,
-    name: "امريكانو ساخن",
+    name: "أمريكانو ساخن",
     category: "hot",
     price: 17.5,
-    desc: "مخبوز طازجاً ومقرمشاً ومحشو بكريمة اللوز الغنية.",
-img:"https://images.openai.com/static-rsc-4/_Mip4ta2h2AwgP9GZOw6tpTnjmVtmi3gFW6fgAqvVATzZC7a47nRbBiwHpFgcTAxPtC5wyeHnDaXDIWivTkFOu6p1htn9hJ_GWknIHu-iFjKVyfhjaaHdLt0aL4mqox6Y9-5BH3gVxfDyvOsdMUZbukPxkRmDGC0S2pxQuR5Me5lTLHt2d6bjCfSaXVImtjB?purpose=fullsize"  },
+    desc: "إسبريسو غني مخفف بالماء الساخن لنكهة واضحة وعميقة.",
+    img: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80"
+  },
   {
     id: 9,
-    name: "تشيز كيك سان سيباستيان",
+    name: "تشيز كيك فراولة",
     category: "sweets",
     price: 14.5,
-    desc: "مخبوز طازجاً ومقرمشاً ومحشو بكريمة اللوز الغنية.",
-    img:"https://images.openai.com/static-rsc-4/isiggbtqq0RLlstMSyaR1TMlyHbtwkys10-rXzqw6oliC7brsv8qZpdfuxIDx4nGbP8ecZWA9gfJhIz7m1oQkLYdrSbW5-hfzTTOnj-JalBPQy0vJBWBvXx54BhJIhsgoO13JSyGgnFCAJzDDXtLpVbH_9tvtSqlSIlr0JeV76vgTFjjk9YyxxeqtXjxj3JD?purpose=fullsize"
+    desc: "طبقة تشيز كيك ناعمة مع صوص الفواكه الطازج.",
+    img: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=600&q=80"
   },
   {
     id: 10,
-    name: "تشيز كيك كلاسيك ",
+    name: "تشيز كيك كلاسيك",
     category: "sweets",
     price: 25,
-    desc: "مخبوز طازجاً ومقرمشاً ومحشو بكريمة اللوز الغنية.",
-img:"https://images.openai.com/static-rsc-4/YfWZIlCJojnumPETOyOAQ3UgAoqIWArDDZAK7YJLS-ixoNcK_ICeUER2PFvvgofHucYKqB4yIlBvKJ8tw3YhmvwIE6oMhBElPuFeQlrRVCbs_Xq4k-AN_aME4ToGy0OiuTgYScKAIk3Wr6bKmGtJasH3zuwit1vrbOKssf7_kNP2NRI7U_M2Spa7IBh63ugZ?purpose=fullsize"
+    desc: "تشيز كيك مخبوز بقوام غني وقاعدة بسكويت مقرمشة.",
+    img: "https://images.unsplash.com/photo-1524351199678-941a58a3df50?auto=format&fit=crop&w=600&q=80"
   },
-   {
+  {
     id: 11,
-    name: "تركي ساخن",
+    name: "قهوة تركية ساخنة",
     category: "hot",
     price: 16,
-    desc: "مخبوز طازجاً ومقرمشاً ومحشو بكريمة اللوز الغنية.",
-img:"https://images.openai.com/static-rsc-4/2BiPb_ijCMmFJCSkXJ8GosEBlTv505GovEcbV7HHTp_I3si9Eq_3TDas3tSrLgfvTVs4hBM4da3HTfb0QVb2F7a2IzrcecrVR-9937CudVa4IPuLayHmiBbGO1B74HF1QkT6c1pOf3SLwhfUBhC1xelN3T__H9Marzz0KZGAK2LXlOO9kEOb-gbnkp8Yzw9q?purpose=fullsize"
-   },
+    desc: "قهوة مطحونة ناعماً تُحضّر على نار هادئة بوجه غني.",
+    img: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80"
+  },
   {
     id: 12,
-    name: "لاتية بالكراميل",
+    name: "لاتيه بالكراميل",
     category: "hot",
     price: 16,
-    desc: "مخبوز طازجاً ومقرمشاً ومحشو بكريمة اللوز الغنية.",
-img:"https://images.openai.com/static-rsc-4/szjWy_OFmcn6FGTdCiPbzGET4ZywpcE963eokxvHEIhaI7zJB9aeaLTeY9B5reOIrDHM5wOhaFcDjVvGZQH3ITjvNcZIjOsdDNUzgo2_TRRwfT0QAOaDJ2ht0OcDTTl2_b-_A4JoVxLlhyU9zF3sDsF8WvnK-SpN7FNlg4YTRdhv_PPhSMMRnvGoTx5_aONF?purpose=fullsize"  }
+    desc: "قهوة لاتيه دافئة ممزوجة بصوص الكراميل الغني.",
+    img: "https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&w=600&q=80"
+  }
 ];
 
 let cart = [];
@@ -113,9 +115,10 @@ const bookingMessage = document.getElementById("bookingMessage");
 
 // عرض عناصر القائمة
 function renderMenu(category = "all") {
+  if (!menuGrid) return;
   menuGrid.innerHTML = "";
-  const filtered = category === "all" 
-    ? menuItems 
+  const filtered = category === "all"
+    ? menuItems
     : menuItems.filter(item => item.category === category);
 
   filtered.forEach(item => {
@@ -152,6 +155,8 @@ function addToCart(id) {
   const product = menuItems.find(item => item.id === id);
   const existing = cart.find(item => item.id === id);
 
+  if (!product) return;
+
   if (existing) {
     existing.qty += 1;
   } else {
@@ -171,8 +176,10 @@ function updateCartUI() {
   const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
   const totalPrice = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
 
-  cartCount.textContent = totalQty;
-  cartTotal.textContent = `${totalPrice} ر.س`;
+  if (cartCount) cartCount.textContent = totalQty;
+  if (cartTotal) cartTotal.textContent = `${totalPrice} ر.س`;
+
+  if (!cartItemsContainer) return;
 
   if (cart.length === 0) {
     cartItemsContainer.innerHTML = `<p class="empty-msg">السلة فارغة حالياً</p>`;
@@ -193,47 +200,78 @@ function updateCartUI() {
 }
 
 // فتح وإغلاق السلة
-openCartBtn.addEventListener("click", () => cartModal.classList.add("open"));
-closeCartBtn.addEventListener("click", () => cartModal.classList.remove("open"));
-cartModal.addEventListener("click", (e) => {
-  if (e.target === cartModal) cartModal.classList.remove("open");
-});
+if (openCartBtn && cartModal) {
+  openCartBtn.addEventListener("click", () => cartModal.classList.add("open"));
+}
+if (closeCartBtn && cartModal) {
+  closeCartBtn.addEventListener("click", () => cartModal.classList.remove("open"));
+}
+if (cartModal) {
+  cartModal.addEventListener("click", (e) => {
+    if (e.target === cartModal) cartModal.classList.remove("open");
+  });
+}
 
 // إتمام الطلب
 // ضع رقم واتساب المقهى هنا (مثال للسعودية: 9665xxxxxxxx)
-const CAFE_WHATSAPP = "966500000000"; 
+const CAFE_WHATSAPP = "966500000000";
 
-checkoutBtn.addEventListener("click", () => {
-  if (cart.length === 0) {
-    alert("السلة فارغة! أضف بعض المشروبات أولاً.");
-    return;
-  }
+if (checkoutBtn) {
+  checkoutBtn.addEventListener("click", () => {
+    if (cart.length === 0) {
+      alert("السلة فارغة! أضف بعض المشروبات أولاً.");
+      return;
+    }
 
-  const customerName = document.getElementById("customerOrderName").value.trim() || "زبون";
+    const nameInput = document.getElementById("customerOrderName");
+    const customerName = nameInput ? (nameInput.value.trim() || "زبون") : "زبون";
 
-  // 1. توليد رقم طلب فريد مكون من 4 أرقام
-  const randomNum = Math.floor(1000 + Math.random() * 9000);
-  const orderNumber = `SH-${randomNum}`;
+    // 1. توليد رقم طلب فريد مكون من 4 أرقام
+    const randomNum = Math.floor(1000 + Math.random() * 9000);
+    const orderNumber = `SH-${randomNum}`;
 
-  // 2. تجهيز تفاصيل الطلب للإرسال
-  const totalPrice = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
-  const itemsList = cart.map(item => `- ${item.name} (${item.qty} × ${item.price} ر.س)`).join("\n");
+    // 2. تجهيز تفاصيل الطلب للإرسال
+    const totalPrice = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+    const itemsList = cart.map(item => `- ${item.name} (${item.qty} × ${item.price} ر.س)`).join("\n");
 
-  const message = `مرحباً مقهى شهاب ☕\n` +
-                  `رقم الطلب: *${orderNumber}*\n` +
-                  `الاسم: ${customerName}\n\n` +
-                  `*الطلبات:*\n${itemsList}\n\n` +
-                  `*الإجمالي:* ${totalPrice} ر.س`;
+    const message = `مرحباً مقهى شهاب ☕\n` +
+                    `رقم الطلب: *${orderNumber}*\n` +
+                    `الاسم: ${customerName}\n\n` +
+                    `*الطلبات:*\n${itemsList}\n\n` +
+                    `*الإجمالي:* ${totalPrice} ر.س`;
 
-  // 3. عرض رقم الطلب للزبون وتجهيز رابط الواتساب
-  document.getElementById("orderNumberDisplay").textContent = orderNumber;
-  document.getElementById("whatsappOrderLink").href = `https://wa.me/${CAFE_WHATSAPP}?text=${encodeURIComponent(message)}`;
-  document.getElementById("orderReceipt").classList.remove("hidden");
+    // 3. عرض رقم الطلب للزبون وتجهيز رابط الواتساب
+    const orderNumEl = document.getElementById("orderNumberDisplay");
+    const waLinkEl = document.getElementById("whatsappOrderLink");
+    const receiptEl = document.getElementById("orderReceipt");
 
-  // تفريغ السلة بعد التأكيد
-  cart = [];
-  updateCartUI();
-});
+    if (orderNumEl && waLinkEl && receiptEl) {
+      orderNumEl.textContent = orderNumber;
+      waLinkEl.href = `https://wa.me/${CAFE_WHATSAPP}?text=${encodeURIComponent(message)}`;
+      receiptEl.classList.remove("hidden");
+    } else {
+      alert(`تم تأكيد طلبك بنجاح! ☕\nرقم الطلب: ${orderNumber}`);
+    }
+
+    // تفريغ السلة بعد التأكيد
+    cart = [];
+    updateCartUI();
+  });
+}
+
+// معالجة نموذج الحجز
+if (bookingForm && bookingMessage) {
+  bookingForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const name = document.getElementById("guestName").value;
+    const date = document.getElementById("bookingDate").value;
+    const time = document.getElementById("bookingTime").value;
+
+    bookingMessage.textContent = `شكراً لك يا ${name}! تم تأكيد حجز طاولتك ليوم ${date} الساعة ${time}.`;
+    bookingMessage.classList.remove("hidden");
+    bookingForm.reset();
+  });
+}
 
 // التشغيل الأولي
 renderMenu();
