@@ -200,27 +200,39 @@ cartModal.addEventListener("click", (e) => {
 });
 
 // إتمام الطلب
+// ضع رقم واتساب المقهى هنا (مثال للسعودية: 9665xxxxxxxx)
+const CAFE_WHATSAPP = "966500000000"; 
+
 checkoutBtn.addEventListener("click", () => {
   if (cart.length === 0) {
     alert("السلة فارغة! أضف بعض المشروبات أولاً.");
     return;
   }
-  alert("تم استلام طلبك بنجاح! جاري تحضير قهوتك ☕");
+
+  const customerName = document.getElementById("customerOrderName").value.trim() || "زبون";
+
+  // 1. توليد رقم طلب فريد مكون من 4 أرقام
+  const randomNum = Math.floor(1000 + Math.random() * 9000);
+  const orderNumber = `SH-${randomNum}`;
+
+  // 2. تجهيز تفاصيل الطلب للإرسال
+  const totalPrice = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+  const itemsList = cart.map(item => `- ${item.name} (${item.qty} × ${item.price} ر.س)`).join("\n");
+
+  const message = `مرحباً مقهى شهاب ☕\n` +
+                  `رقم الطلب: *${orderNumber}*\n` +
+                  `الاسم: ${customerName}\n\n` +
+                  `*الطلبات:*\n${itemsList}\n\n` +
+                  `*الإجمالي:* ${totalPrice} ر.س`;
+
+  // 3. عرض رقم الطلب للزبون وتجهيز رابط الواتساب
+  document.getElementById("orderNumberDisplay").textContent = orderNumber;
+  document.getElementById("whatsappOrderLink").href = `https://wa.me/${CAFE_WHATSAPP}?text=${encodeURIComponent(message)}`;
+  document.getElementById("orderReceipt").classList.remove("hidden");
+
+  // تفريغ السلة بعد التأكيد
   cart = [];
   updateCartUI();
-  cartModal.classList.remove("open");
-});
-
-// معالجة نموذج الحجز
-bookingForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const name = document.getElementById("guestName").value;
-  const date = document.getElementById("bookingDate").value;
-  const time = document.getElementById("bookingTime").value;
-
-  bookingMessage.textContent = `شكراً لك يا ${name}! تم تأكيد حجز طاولتك ليوم ${date} الساعة ${time}.`;
-  bookingMessage.classList.remove("hidden");
-  bookingForm.reset();
 });
 
 // التشغيل الأولي
