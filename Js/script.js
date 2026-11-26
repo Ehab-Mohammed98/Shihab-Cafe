@@ -173,7 +173,7 @@ const SEND_MODE = "whatsapp";
 let selectedPaymentMethod = "مدى";
 
 // رابط Google Apps Script Web App
-const GOOGLE_SHEET_URL = "https://docs.google.com/spreadsheets/d/1hkfaL_0WlxF6cmm7GQhvZBsdeFcEezwV3FhFhcw8zgs/edit?usp=sharing";
+const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbwh_oW2jmd0704LycFvjtndNuUfR0Zx8kNnxQkjO_N-KysJkrUddSc4nkpfZBeAZIOTYw/exec";
 
 // عناصر DOM
 const menuGrid = document.getElementById("menuGrid");
