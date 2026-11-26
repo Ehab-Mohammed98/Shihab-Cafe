@@ -128,8 +128,22 @@ img:"https://images.openai.com/static-rsc-4/P3Ez-lOUWtflCREbqSEhQwT37vf1h_gkuGma
     price: 16,
     desc: "قهوة لاتيه دافئة ممزوجة بصوص الكراميل الغني.",
     img:"https://images.openai.com/static-rsc-4/E-H-MfvVi16hpxeY9bKipW5nxPnEqKvb0vPldEIs7TR60MM8kIFz7hnQ7_BxX49jzFU-4X9SQ8leBsDaC0qaLwA36RRAU-Z-MBt6g2yaV_O4j0F11Ii5UGNJ_H-mvtwGj_lUoJYzmlXve14KQfpk-cQ05OTKgM0gTYARoB5nr6MdJMvlbtO2hh6KI1bIRgsc?purpose=fullsize"
-  }
-  ,
+  }  ,
+    {
+    id: 17,
+    name: "موهيتو الفراولة",
+    category: "cold",
+    price: 18,
+    desc: "قهوة مطحونة ناعماً تُحضّر على نار هادئة بوجه غني.",
+img:"https://images.openai.com/static-rsc-4/G7BVftbYIM01j-z1Jkv-tc_ZPLBEcuaX0ifhDE8z9HZ-3nj-fNjM0hZai9Zr_W2Qi7x9toSP6E01U1Wwsi03Ir8yJxtN1R0CaOInCGQ4nz7GihMN82OUvsywpNAconRqfAyP8fzdodYI6MlYEZMDs7U-qh9DVMO80XrEOYaAJ8ect-C8mDimb0U4yhrLstRW?purpose=fullsize"    },
+  {
+    id: 18,
+    name: "سموذي المانجو والأناناس",
+    category: "cold",
+    price: 18,
+    desc: "قهوة لاتيه دافئة ممزوجة بصوص الكراميل الغني.",
+    img:"https://images.openai.com/static-rsc-4/XhreCFTUqY8GiAJTCtWNITEqgylskpdh3gOXkPDZ_qDmrKhfnJ5GA9Loq8g2cLEL8Ll4wrfN_v-tufQcnW2v2ei__uh8vKRzr6A5CxLcr3t3_Lltq6nFIiH6ySvXIN-ZAMTj2p9kUKq1tPw4kCUW0gjsagI-MtwMfFVUQmOwpOY1sjMdiI0Jmaop9jd3HnM6?purpose=fullsize"
+  },
     {
     id: 17,
     name: "موهيتو الفراولة",
