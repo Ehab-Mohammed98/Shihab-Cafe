@@ -1,3 +1,4 @@
+console.log("SCRIPT LOADED");
 // بيانات قائمة المقهى
 const menuItems = [
   {
