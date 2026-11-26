@@ -152,6 +152,7 @@ img:"https://images.openai.com/static-rsc-4/isiggbtqq0RLlstMSyaR1TMlyHbtwkys10-r
     price: 18,
     desc: "قهوة مطحونة ناعماً تُحضّر على نار هادئة بوجه غني.",
 img:"https://images.openai.com/static-rsc-4/G7BVftbYIM01j-z1Jkv-tc_ZPLBEcuaX0ifhDE8z9HZ-3nj-fNjM0hZai9Zr_W2Qi7x9toSP6E01U1Wwsi03Ir8yJxtN1R0CaOInCGQ4nz7GihMN82OUvsywpNAconRqfAyP8fzdodYI6MlYEZMDs7U-qh9DVMO80XrEOYaAJ8ect-C8mDimb0U4yhrLstRW?purpose=fullsize"    },
+  },
   {
     id: 20,
     name: "سموذي المانجو والأناناس",
