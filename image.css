@@ -578,6 +578,50 @@ body {
   margin-bottom: 14px;
 }
 
+/* ===== شارات وخيارات الدفع داخل السلة ===== */
+.payment-methods-box {
+  margin-bottom: 14px;
+}
+
+.payment-label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.payment-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.payment-chip {
+  background-color: var(--white);
+  color: var(--text-dark);
+  border: 1.5px solid var(--border-color);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+}
+
+.payment-chip:hover {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.payment-chip.active {
+  background-color: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+}
+
 .order-confirm-box {
   margin-top: 14px;
   padding: 14px;
