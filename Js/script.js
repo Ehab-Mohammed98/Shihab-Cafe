@@ -294,38 +294,42 @@ if (checkoutBtn) {
     }
 
     const nameInput = document.getElementById("customerOrderName");
-    const customerName = nameInput && nameInput.value.trim() ? nameInput.value.trim() : "زبون";
+    const phoneInput = document.getElementById("customerPhoneInput");
+
+    const customerName = nameInput && nameInput.value.trim() ? nameInput.value.trim() : "عميلنا العزيز";
+    const customerPhone = phoneInput ? phoneInput.value.trim().replace(/\s+/g, "") : "";
+
+    if (!customerPhone) {
+      alert("يرجى إدخال رقم جوال العميل أولاً.");
+      if (phoneInput) phoneInput.focus();
+      return;
+    }
 
     const randomNum = Math.floor(1000 + Math.random() * 9000);
     const orderNumber = `SH-${randomNum}`;
-
     const totalPrice = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
-    const itemsList = cart.map(item => `- ${item.name} (${item.qty} × ${item.price} ر.س)`).join("\n");
 
-    const message =
-      `مرحباً مقهى شهاب ☕\n` +
-      `رقم الطلب: *${orderNumber}*\n` +
-      `الاسم: ${customerName}\n\n` +
-      `*الطلبات:*\n${itemsList}\n\n` +
-      `*الإجمالي:* ${totalPrice} ر.س`;
+    const smsBody =
+      `مرحباً ${customerName}، تم تأكيد طلبك في مقهى شهاب. ` +
+      `رقم الطلب: ${orderNumber} - الإجمالي: ${totalPrice} ر.س`;
 
     const orderNumEl = document.getElementById("orderNumberDisplay");
-    const waLinkEl = document.getElementById("whatsappOrderLink");
+    const smsLinkEl = document.getElementById("smsOrderLink");
     const receiptEl = document.getElementById("orderReceipt");
 
-    if (orderNumEl) orderNumEl.textContent = orderNumber;
-    if (waLinkEl) {
-      waLinkEl.href = `https://wa.me/${CAFE_WHATSAPP}?text=${encodeURIComponent(message)}`;
-    }
-    if (receiptEl) receiptEl.classList.remove("hidden");
+    // رابط SMS متوافق مع أندرويد وآيفون
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+    const separator = isIOS ? "&" : "?";
+    const smsUrl = `sms:${customerPhone}${separator}body=${encodeURIComponent(smsBody)}`;
 
-    alert(`تم تأكيد طلبك بنجاح! ☕\nرقم الطلب الخاص بك هو: ${orderNumber}`);
+    if (orderNumEl) orderNumEl.textContent = orderNumber;
+    if (smsLinkEl) smsLinkEl.href = smsUrl;
+    if (receiptEl) receiptEl.classList.remove("hidden");
 
     cart = [];
     updateCartUI();
   });
 }
-
 // معالجة نموذج الحجز
 if (bookingForm && bookingMessage) {
   bookingForm.addEventListener("submit", (e) => {
