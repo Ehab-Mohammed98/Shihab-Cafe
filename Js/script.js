@@ -172,6 +172,9 @@ const SEND_MODE = "whatsapp";
 // اختيار طريقة الدفع الافتراضية
 let selectedPaymentMethod = "مدى";
 
+// رابط Google Apps Script Web App
+const GOOGLE_SHEET_URL = "ضع_رابط_Web_App_هنا";
+
 // عناصر DOM
 const menuGrid = document.getElementById("menuGrid");
 const filterBtns = document.querySelectorAll(".filter-btn");
@@ -185,6 +188,24 @@ const checkoutBtn = document.getElementById("checkoutBtn");
 const paymentChips = document.querySelectorAll(".payment-chip");
 const bookingForm = document.getElementById("bookingForm");
 const bookingMessage = document.getElementById("bookingMessage");
+
+// إرسال البيانات إلى Google Sheet
+function sendToGoogleSheet(payload) {
+  if (!GOOGLE_SHEET_URL || GOOGLE_SHEET_URL.includes("ضع_رابط_Web_App_هنا")) {
+    return;
+  }
+
+  fetch(GOOGLE_SHEET_URL, {
+    method: "POST",
+    mode: "no-cors",
+    headers: {
+      "Content-Type": "text/plain;charset=utf-8"
+    },
+    body: JSON.stringify(payload)
+  }).catch((err) => {
+    console.error("خطأ أثناء الإرسال إلى Google Sheet:", err);
+  });
+}
 
 // تفعيل أزرار طرق الدفع
 paymentChips.forEach((chip) => {
@@ -343,6 +364,16 @@ if (checkoutBtn) {
     const totalPrice = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
     const itemsList = cart.map(item => `- ${item.name} (${item.qty} × ${item.price} ر.س)`).join("\n");
 
+    sendToGoogleSheet({
+      type: "order",
+      orderNumber: orderNumber,
+      customerName: customerName,
+      customerPhone: rawPhone,
+      paymentMethod: selectedPaymentMethod,
+      items: itemsList.replace(/\n/g, " | "),
+      total: totalPrice
+    });
+
     const textMessage =
       `مرحباً ${customerName} ☕\n` +
       `تم تأكيد طلبك في مقهى شهاب.\n` +
@@ -390,8 +421,19 @@ if (bookingForm && bookingMessage) {
   bookingForm.addEventListener("submit", (e) => {
     e.preventDefault();
     const name = document.getElementById("guestName").value;
+    const phone = document.getElementById("guestPhone").value;
     const date = document.getElementById("bookingDate").value;
     const time = document.getElementById("bookingTime").value;
+    const count = document.getElementById("guestCount").value;
+
+    sendToGoogleSheet({
+      type: "booking",
+      guestName: name,
+      guestPhone: phone,
+      bookingDate: date,
+      bookingTime: time,
+      guestCount: count
+    });
 
     bookingMessage.textContent = `شكراً لك يا ${name}! تم تأكيد حجز طاولتك ليوم ${date} الساعة ${time}.`;
     bookingMessage.classList.remove("hidden");
