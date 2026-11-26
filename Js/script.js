@@ -50,7 +50,7 @@ const menuItems = [
   },
   {
     id: 7,
-    name: "كابتشينو كلاسيك",
+    name: "كابيتشينو كلاسيك",
     category: "hot",
     price: 20,
     desc: "توازن مثالي بين الإسبريسو والحليب المبخر ورغوة الحليب الكثيفة.",
@@ -96,74 +96,74 @@ const menuItems = [
     desc: "قهوة لاتيه دافئة ممزوجة بصوص الكراميل الغني.",
     img: "https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&w=600&q=80"
   },
-    {
+  {
     id: 13,
     name: "آيس أمريكانو",
     category: "cold",
     price: 16,
-    desc: "قهوة مطحونة ناعماً تُحضّر على نار هادئة بوجه غني.",
-    img: "https://images.openai.com/static-rsc-4/oPQAW8xIvEcE8YFv3zOYXTlBMSlGoUF-VvCt-j0ubRVjB6GmC8gib3sIyAcJ6Q5Cx02cYNr6WPrAxLEGATGxEyVuD5k71sV7BB-6m8x39srhy9RjSqMrdiW5s_6hlPsBravExY5opA-xp9lyiMTFic7pPNpNvI2HvkGfXYkyyI30xAHyjt8__dY-NEGMzL0w?purpose=fullsize"
+    desc: "إسبريسو منعش يُقدّم مع الماء البارد ومكعبات الثلج.",
+    img: "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=600&q=80"
   },
   {
     id: 14,
     name: "فرابتشينو الكراميل",
     category: "cold",
     price: 16,
-    desc: "قهوة لاتيه دافئة ممزوجة بصوص الكراميل الغني.",
-    img:"https://images.openai.com/static-rsc-4/zGS33tY_IbUmnxIkGXn_z2mAjRlxqXBoD1cIBLH401dZeGMqYkKRAFxNykklo2ezDSvYEXPc64cRPO5BT7BgzM5t3pZnfVT09nBJn_bBkemGowULxRyInpambEpZvsie6etE87ieLQj1gtjRpG1-TJG8x8ht1fHbwmQXvguFHBJCKXRppXWYl32Z9ZwqDbfP?purpose=fullsize"
-  }
-  ,
-    {
+    desc: "مشروب مثلج مخلوط بالقهوة والحليب مع لمسة كراميل غنية.",
+    img: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=600&q=80"
+  },
+  {
     id: 15,
     name: "موهيتو الليمون والنعناع",
     category: "cold",
     price: 16,
-    desc: "قهوة مطحونة ناعماً تُحضّر على نار هادئة بوجه غني.",
-img:"https://images.openai.com/static-rsc-4/P3Ez-lOUWtflCREbqSEhQwT37vf1h_gkuGmal92qTNsoreSeHhip5VX1LrjD7yH8foHYR8_9UWzj_51aSiC0D6GJ5qt-atTzOf2QiTno9SkcypLiMa-pTlZqeknwVCVA2C-bms6veaDhQBas86CxHIe6Cdu4rQaUPRyiFV5gQmwJr1ANFqJ7I-wVQkCWox3q?purpose=fullsize"
-    },
+    desc: "انتعاش الليمون الطازج وأوراق النعناع مع الثلج المجروش.",
+    img: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80"
+  },
   {
     id: 16,
     name: "موهيتو التوت الأزرق",
     category: "cold",
     price: 16,
-    desc: "قهوة لاتيه دافئة ممزوجة بصوص الكراميل الغني.",
-    img:"https://images.openai.com/static-rsc-4/E-H-MfvVi16hpxeY9bKipW5nxPnEqKvb0vPldEIs7TR60MM8kIFz7hnQ7_BxX49jzFU-4X9SQ8leBsDaC0qaLwA36RRAU-Z-MBt6g2yaV_O4j0F11Ii5UGNJ_H-mvtwGj_lUoJYzmlXve14KQfpk-cQ05OTKgM0gTYARoB5nr6MdJMvlbtO2hh6KI1bIRgsc?purpose=fullsize"
-  }  ,
-    {
+    desc: "مزيج بارد ومنعش بنكهة التوت الأزرق والليمون والنعناع.",
+    img: "https://images.unsplash.com/photo-1546173159-315724a31696?auto=format&fit=crop&w=600&q=80"
+  },
+  {
     id: 17,
-    name: " تشيز كيك كلاسيك",
+    name: "تشيز كيك كلاسيك",
     category: "sweets",
     price: 18,
     desc: "تشيز كيك تقليدي بطبقة بسكويت وقوام غني بالكريمة.",
-img:"https://images.openai.com/static-rsc-4/YfWZIlCJojnumPETOyOAQ3UgAoqIWArDDZAK7YJLS-ixoNcK_ICeUER2PFvvgofHucYKqB4yIlBvKJ8tw3YhmvwIE6oMhBElPuFeQlrRVCbs_Xq4k-AN_aME4ToGy0OiuTgYScKAIk3Wr6bKmGtJasH3zuwit1vrbOKssf7_kNP2NRI7U_M2Spa7IBh63ugZ?purpose=fullsize"  {
-    },
+    img: "https://images.unsplash.com/photo-1524351199678-941a58a3df50?auto=format&fit=crop&w=600&q=80"
+  },
   {
-  id: 18,
+    id: 18,
     name: "تشيز كيك سان سيباستيان",
     category: "sweets",
     price: 18,
-    desc: "تشيز كيك مخبوز بسطح محمّر، وقوام كريمي ناعم من الداخل..",
-img:"https://images.openai.com/static-rsc-4/isiggbtqq0RLlstMSyaR1TMlyHbtwkys10-rXzqw6oliC7brsv8qZpdfuxIDx4nGbP8ecZWA9gfJhIz7m1oQkLYdrSbW5-hfzTTOnj-JalBPQy0vJBWBvXx54BhJIhsgoO13JSyGgnFCAJzDDXtLpVbH_9tvtSqlSIlr0JeV76vgTFjjk9YyxxeqtXjxj3JD?purpose=fullsize"
+    desc: "تشيز كيك مخبوز بسطح محمّر، وقوام كريمي ناعم من الداخل.",
+    img: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=600&q=80"
   },
-    {
+  {
     id: 19,
     name: "موهيتو الفراولة",
     category: "cold",
     price: 18,
-    desc: "قهوة مطحونة ناعماً تُحضّر على نار هادئة بوجه غني.",
-img:"https://images.openai.com/static-rsc-4/G7BVftbYIM01j-z1Jkv-tc_ZPLBEcuaX0ifhDE8z9HZ-3nj-fNjM0hZai9Zr_W2Qi7x9toSP6E01U1Wwsi03Ir8yJxtN1R0CaOInCGQ4nz7GihMN82OUvsywpNAconRqfAyP8fzdodYI6MlYEZMDs7U-qh9DVMO80XrEOYaAJ8ect-C8mDimb0U4yhrLstRW?purpose=fullsize"    },
+    desc: "مشروب بارد ومنعش بالفراولة الطبيعية والنعناع والثلج.",
+    img: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80"
   },
   {
     id: 20,
     name: "سموذي المانجو والأناناس",
     category: "cold",
     price: 18,
-    desc: "قهوة لاتيه دافئة ممزوجة بصوص الكراميل الغني.",
-    img:"https://images.openai.com/static-rsc-4/XhreCFTUqY8GiAJTCtWNITEqgylskpdh3gOXkPDZ_qDmrKhfnJ5GA9Loq8g2cLEL8Ll4wrfN_v-tufQcnW2v2ei__uh8vKRzr6A5CxLcr3t3_Lltq6nFIiH6ySvXIN-ZAMTj2p9kUKq1tPw4kCUW0gjsagI-MtwMfFVUQmOwpOY1sjMdiI0Jmaop9jd3HnM6?purpose=fullsize"
+    desc: "مزيج استوائي كثيف وبارد من المانجو والأناناس الطازج.",
+    img: "https://images.unsplash.com/photo-1505252585461-04db1eb84625?auto=format&fit=crop&w=600&q=80"
   }
 ];
 
 let cart = [];
+const CAFE_WHATSAPP = "966569060751";
 
 // عناصر DOM
 const menuGrid = document.getElementById("menuGrid");
@@ -265,56 +265,10 @@ function updateCartUI() {
 }
 
 // فتح وإغلاق السلة
-if (openCartBtn && cartModal) {
-  openCartBtn.addEventListener("click", () => cartModal.classList.add("open"));
-}
-if (closeCartBtn && cartModal) {
-  closeCartBtn.addEventListener("click", () => cartModal.classList.remove("open"));
-}
-if (cartModal) {
-  cartModal.addEventListener("click", (e) => {
-    if (e.target === cartModal) cartModal.classList.remove("open");
-  });
-}
-
-// إتمام الطلب
-// ضع رقم واتساب المقهى هنا (مثال للسعودية: 9665xxxxxxxx)
-const CAFE_WHATSAPP = "+966569060751";
-
-if (checkoutBtn) {
-  checkoutBtn.addEventListener("click", () => {
-    if (cart.length === 0) {
-      alert("السلة فارغة! أضف بعض المشروبات أولاً.");
-      return;
-    }
-
-    const nameInput = document.getElementById("customerOrderName");
-    const customerName = nameInput ? (nameInput.value.trim() || "زبون") : "زبون";
-
-    // 1. توليد رقم طلب فريد مكون من 4 أرقام
-    const randomNum = Math.floor(1000 + Math.random() * 9000);
-    const orderNumber = `SH-${randomNum}`;
-
-    // 2. تجهيز تفاصيل الطلب للإرسال
-    const totalPrice = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
-    const itemsList = cart.map(item => `- ${item.name} (${item.qty} × ${item.price} ر.س)`).join("\n");
-
-    const message = `مرحباً مقهى شهاب ☕\n` +
-                    `رقم الطلب: *${orderNumber}*\n` +
-                    `الاسم: ${customerName}\n\n` +
-                    `*الطلبات:*\n${itemsList}\n\n` +
-                    `*الإجمالي:* ${totalPrice} ر.س`;
-
-    // 3. عرض رقم الطلب للزبون وتجهيز رابط الواتساب
-   const cartModal = document.getElementById("cartModal");
-const openCartBtn = document.getElementById("openCartBtn");
-const closeCartBtn = document.getElementById("closeCartBtn");
-
-if (openCartBtn && cartModal) {
-  openCartBtn.addEventListener("click", () => {
-    cartModal.style.display = "flex";
-    cartModal.classList.add("open");
-  });
+function openCart() {
+  if (!cartModal) return;
+  cartModal.style.display = "flex";
+  cartModal.classList.add("open");
 }
 
 function closeCart() {
@@ -323,25 +277,50 @@ function closeCart() {
   cartModal.classList.remove("open");
 }
 
-if (closeCartBtn) {
-  closeCartBtn.addEventListener("click", closeCart);
-}
-
+if (openCartBtn) openCartBtn.addEventListener("click", openCart);
+if (closeCartBtn) closeCartBtn.addEventListener("click", closeCart);
 if (cartModal) {
   cartModal.addEventListener("click", (e) => {
     if (e.target === cartModal) closeCart();
   });
 }
 
-    if (orderNumEl && waLinkEl && receiptEl) {
-      orderNumEl.textContent = orderNumber;
-      waLinkEl.href = `https://wa.me/${CAFE_WHATSAPP}?text=${encodeURIComponent(message)}`;
-      receiptEl.classList.remove("hidden");
-    } else {
-      alert(`تم تأكيد طلبك بنجاح! ☕\nرقم الطلب: ${orderNumber}`);
+// إتمام الطلب وتوليد رقم الطلب
+if (checkoutBtn) {
+  checkoutBtn.addEventListener("click", () => {
+    if (cart.length === 0) {
+      alert("السلة فارغة! أضف بعض المشروبات أولاً.");
+      return;
     }
 
-    // تفريغ السلة بعد التأكيد
+    const nameInput = document.getElementById("customerOrderName");
+    const customerName = nameInput && nameInput.value.trim() ? nameInput.value.trim() : "زبون";
+
+    const randomNum = Math.floor(1000 + Math.random() * 9000);
+    const orderNumber = `SH-${randomNum}`;
+
+    const totalPrice = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+    const itemsList = cart.map(item => `- ${item.name} (${item.qty} × ${item.price} ر.س)`).join("\n");
+
+    const message =
+      `مرحباً مقهى شهاب ☕\n` +
+      `رقم الطلب: *${orderNumber}*\n` +
+      `الاسم: ${customerName}\n\n` +
+      `*الطلبات:*\n${itemsList}\n\n` +
+      `*الإجمالي:* ${totalPrice} ر.س`;
+
+    const orderNumEl = document.getElementById("orderNumberDisplay");
+    const waLinkEl = document.getElementById("whatsappOrderLink");
+    const receiptEl = document.getElementById("orderReceipt");
+
+    if (orderNumEl) orderNumEl.textContent = orderNumber;
+    if (waLinkEl) {
+      waLinkEl.href = `https://wa.me/${CAFE_WHATSAPP}?text=${encodeURIComponent(message)}`;
+    }
+    if (receiptEl) receiptEl.classList.remove("hidden");
+
+    alert(`تم تأكيد طلبك بنجاح! ☕\nرقم الطلب الخاص بك هو: ${orderNumber}`);
+
     cart = [];
     updateCartUI();
   });
