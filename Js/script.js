@@ -131,28 +131,29 @@ img:"https://images.openai.com/static-rsc-4/P3Ez-lOUWtflCREbqSEhQwT37vf1h_gkuGma
   }  ,
     {
     id: 17,
-    name: "موهيتو الفراولة",
-    category: "cold",
+    name: " تشيز كيك كلاسيك",
+    category: "sweets",
     price: 18,
-    desc: "قهوة مطحونة ناعماً تُحضّر على نار هادئة بوجه غني.",
-img:"https://images.openai.com/static-rsc-4/G7BVftbYIM01j-z1Jkv-tc_ZPLBEcuaX0ifhDE8z9HZ-3nj-fNjM0hZai9Zr_W2Qi7x9toSP6E01U1Wwsi03Ir8yJxtN1R0CaOInCGQ4nz7GihMN82OUvsywpNAconRqfAyP8fzdodYI6MlYEZMDs7U-qh9DVMO80XrEOYaAJ8ect-C8mDimb0U4yhrLstRW?purpose=fullsize"    },
+    desc: "تشيز كيك تقليدي بطبقة بسكويت وقوام غني بالكريمة.",
+img:"https://images.openai.com/static-rsc-4/YfWZIlCJojnumPETOyOAQ3UgAoqIWArDDZAK7YJLS-ixoNcK_ICeUER2PFvvgofHucYKqB4yIlBvKJ8tw3YhmvwIE6oMhBElPuFeQlrRVCbs_Xq4k-AN_aME4ToGy0OiuTgYScKAIk3Wr6bKmGtJasH3zuwit1vrbOKssf7_kNP2NRI7U_M2Spa7IBh63ugZ?purpose=fullsize"  {
+    },
   {
-    id: 18,
-    name: "سموذي المانجو والأناناس",
-    category: "cold",
+  id: 18,
+    name: "تشيز كيك سان سيباستيان",
+    category: "sweets",
     price: 18,
-    desc: "قهوة لاتيه دافئة ممزوجة بصوص الكراميل الغني.",
-    img:"https://images.openai.com/static-rsc-4/XhreCFTUqY8GiAJTCtWNITEqgylskpdh3gOXkPDZ_qDmrKhfnJ5GA9Loq8g2cLEL8Ll4wrfN_v-tufQcnW2v2ei__uh8vKRzr6A5CxLcr3t3_Lltq6nFIiH6ySvXIN-ZAMTj2p9kUKq1tPw4kCUW0gjsagI-MtwMfFVUQmOwpOY1sjMdiI0Jmaop9jd3HnM6?purpose=fullsize"
+    desc: "تشيز كيك مخبوز بسطح محمّر، وقوام كريمي ناعم من الداخل..",
+img:"https://images.openai.com/static-rsc-4/isiggbtqq0RLlstMSyaR1TMlyHbtwkys10-rXzqw6oliC7brsv8qZpdfuxIDx4nGbP8ecZWA9gfJhIz7m1oQkLYdrSbW5-hfzTTOnj-JalBPQy0vJBWBvXx54BhJIhsgoO13JSyGgnFCAJzDDXtLpVbH_9tvtSqlSIlr0JeV76vgTFjjk9YyxxeqtXjxj3JD?purpose=fullsize"
   },
     {
-    id: 17,
+    id: 19,
     name: "موهيتو الفراولة",
     category: "cold",
     price: 18,
     desc: "قهوة مطحونة ناعماً تُحضّر على نار هادئة بوجه غني.",
 img:"https://images.openai.com/static-rsc-4/G7BVftbYIM01j-z1Jkv-tc_ZPLBEcuaX0ifhDE8z9HZ-3nj-fNjM0hZai9Zr_W2Qi7x9toSP6E01U1Wwsi03Ir8yJxtN1R0CaOInCGQ4nz7GihMN82OUvsywpNAconRqfAyP8fzdodYI6MlYEZMDs7U-qh9DVMO80XrEOYaAJ8ect-C8mDimb0U4yhrLstRW?purpose=fullsize"    },
   {
-    id: 18,
+    id: 20,
     name: "سموذي المانجو والأناناس",
     category: "cold",
     price: 18,
