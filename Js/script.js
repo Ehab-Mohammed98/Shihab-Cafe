@@ -50,7 +50,7 @@ const menuItems = [
   },
   {
     id: 7,
-    name: "كابيتشينو كلاسيك",
+    name: "كابتشينو كلاسيك",
     category: "hot",
     price: 20,
     desc: "توازن مثالي بين الإسبريسو والحليب المبخر ورغوة الحليب الكثيفة.",
@@ -130,7 +130,7 @@ const menuItems = [
   },
   {
     id: 17,
-    name: "تشيز كيك كلاسيك",
+    name: "تشيز كيك كلاسيك (حجم وسط)",
     category: "sweets",
     price: 18,
     desc: "تشيز كيك تقليدي بطبقة بسكويت وقوام غني بالكريمة.",
@@ -138,7 +138,7 @@ const menuItems = [
   },
   {
     id: 18,
-    name: "تشيز كيك سان سيباستيان",
+    name: "تشيز كيك سان سيباستيان (حجم وسط)",
     category: "sweets",
     price: 18,
     desc: "تشيز كيك مخبوز بسطح محمّر، وقوام كريمي ناعم من الداخل.",
@@ -163,7 +163,9 @@ const menuItems = [
 ];
 
 let cart = [];
-const CAFE_WHATSAPP = "966569060751";
+
+// اختر نوع الإرسال: "whatsapp" أو "sms"
+const SEND_MODE = "whatsapp";
 
 // عناصر DOM
 const menuGrid = document.getElementById("menuGrid");
@@ -219,7 +221,6 @@ filterBtns.forEach(btn => {
 function addToCart(id) {
   const product = menuItems.find(item => item.id === id);
   const existing = cart.find(item => item.id === id);
-
   if (!product) return;
 
   if (existing) {
@@ -264,7 +265,7 @@ function updateCartUI() {
   `).join("");
 }
 
-// فتح وإغلاق السلة
+// فتح وإغلاق السلة عبر زر السلة في الأعلى
 function openCart() {
   if (!cartModal) return;
   cartModal.style.display = "flex";
@@ -285,7 +286,19 @@ if (cartModal) {
   });
 }
 
-// إتمام الطلب وتوليد رقم الطلب
+// تحويل الرقم لصيغة دولية لواتساب
+function toInternationalPhone(rawPhone, defaultCountryCode = "966") {
+  let digits = (rawPhone || "").replace(/\D/g, "");
+  if (!digits) return "";
+  if (digits.startsWith("00")) {
+    digits = digits.slice(2);
+  } else if (digits.startsWith("0")) {
+    digits = defaultCountryCode + digits.slice(1);
+  }
+  return digits;
+}
+
+// تأكيد الطلب وتجهيز الرسالة برقم الطلب
 if (checkoutBtn) {
   checkoutBtn.addEventListener("click", () => {
     if (cart.length === 0) {
@@ -294,42 +307,64 @@ if (checkoutBtn) {
     }
 
     const nameInput = document.getElementById("customerOrderName");
-    const phoneInput = document.getElementById("customerPhoneInput");
+    const phoneInput =
+      document.getElementById("customerWhatsapp") ||
+      document.getElementById("customerPhoneInput");
 
-    const customerName = nameInput && nameInput.value.trim() ? nameInput.value.trim() : "عميلنا العزيز";
-    const customerPhone = phoneInput ? phoneInput.value.trim().replace(/\s+/g, "") : "";
+    const customerName = nameInput && nameInput.value.trim() ? nameInput.value.trim() : "زبون";
+    const rawPhone = phoneInput ? phoneInput.value.trim() : "";
 
-    if (!customerPhone) {
-      alert("يرجى إدخال رقم جوال العميل أولاً.");
+    if (!rawPhone) {
+      alert("يرجى إدخال رقم العميل أولاً.");
       if (phoneInput) phoneInput.focus();
       return;
     }
 
-    const randomNum = Math.floor(1000 + Math.random() * 9000);
-    const orderNumber = `SH-${randomNum}`;
+    const orderNumber = `SH-${Math.floor(1000 + Math.random() * 9000)}`;
     const totalPrice = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+    const itemsList = cart.map(item => `- ${item.name} (${item.qty} × ${item.price} ر.س)`).join("\n");
 
-    const smsBody =
-      `مرحباً ${customerName}، تم تأكيد طلبك في مقهى شهاب. ` +
-      `رقم الطلب: ${orderNumber} - الإجمالي: ${totalPrice} ر.س`;
+    const textMessage =
+      `مرحباً ${customerName} ☕\n` +
+      `تم تأكيد طلبك في مقهى شهاب.\n` +
+      `رقم الطلب: ${orderNumber}\n\n` +
+      `الطلبات:\n${itemsList}\n\n` +
+      `الإجمالي: ${totalPrice} ر.س`;
+
+    let targetUrl = "#";
+    if (SEND_MODE === "sms") {
+      const cleanSmsPhone = rawPhone.replace(/\s+/g, "");
+      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+      const sep = isIOS ? "&" : "?";
+      targetUrl = `sms:${cleanSmsPhone}${sep}body=${encodeURIComponent(textMessage)}`;
+    } else {
+      const intlPhone = toInternationalPhone(rawPhone);
+      targetUrl = `https://wa.me/${intlPhone}?text=${encodeURIComponent(textMessage)}`;
+    }
 
     const orderNumEl = document.getElementById("orderNumberDisplay");
-    const smsLinkEl = document.getElementById("smsOrderLink");
     const receiptEl = document.getElementById("orderReceipt");
-
-    // رابط SMS متوافق مع أندرويد وآيفون
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-    const separator = isIOS ? "&" : "?";
-    const smsUrl = `sms:${customerPhone}${separator}body=${encodeURIComponent(smsBody)}`;
+    const actionLinkEl =
+      document.getElementById("whatsappOrderLink") ||
+      document.getElementById("smsOrderLink");
 
     if (orderNumEl) orderNumEl.textContent = orderNumber;
-    if (smsLinkEl) smsLinkEl.href = smsUrl;
+    if (actionLinkEl) {
+      actionLinkEl.href = targetUrl;
+      actionLinkEl.textContent =
+        SEND_MODE === "sms"
+          ? "إرسال رسالة SMS برقم الطلب"
+          : "إرسال رقم الطلب عبر واتساب";
+    }
     if (receiptEl) receiptEl.classList.remove("hidden");
+
+    alert(`تم تأكيد طلبك بنجاح ☕\nرقم الطلب: ${orderNumber}`);
 
     cart = [];
     updateCartUI();
   });
 }
+
 // معالجة نموذج الحجز
 if (bookingForm && bookingMessage) {
   bookingForm.addEventListener("submit", (e) => {
