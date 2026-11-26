@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>مقهى شهاب  | قهوة مختصة وأجواء دافئة</title>
+  <title>مقهى شهاب | قهوة مختصة وأجواء دافئة</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -14,14 +14,14 @@
   <!-- الشريط العلوي -->
   <header class="navbar">
     <div class="container nav-content">
-      <a href="#" class="logo">☕ مقهى <span>شهاب </span></a>
+      <a href="#" class="logo">☕ مقهى <span>شهاب</span></a>
       <nav class="nav-links">
         <a href="#home">الرئيسية</a>
         <a href="#menu">القائمة</a>
         <a href="#about">قصتنا</a>
         <a href="#booking">احجز طاولة</a>
       </nav>
-      <button class="cart-btn" id="openCartBtn">
+      <button type="button" class="cart-btn" id="openCartBtn">
         🛒 السلة (<span id="cartCount">0</span>)
       </button>
     </div>
@@ -50,16 +50,14 @@
 
       <!-- أزرار التصفية -->
       <div class="filter-buttons">
-        <button class="filter-btn active" data-category="all">الكل</button>
-        <button class="filter-btn" data-category="hot">قهوة ساخنة</button>
-        <button class="filter-btn" data-category="cold">مشروبات باردة</button>
-        <button class="filter-btn" data-category="sweets">حلويات</button>
+        <button type="button" class="filter-btn active" data-category="all">الكل</button>
+        <button type="button" class="filter-btn" data-category="hot">قهوة ساخنة</button>
+        <button type="button" class="filter-btn" data-category="cold">مشروبات باردة</button>
+        <button type="button" class="filter-btn" data-category="sweets">حلويات</button>
       </div>
 
       <!-- شبكة المنتجات -->
-      <div class="menu-grid" id="menuGrid">
-        <!-- يتم توليد البطاقات تلقائياً عبر JavaScript -->
-      </div>
+      <div class="menu-grid" id="menuGrid"></div>
     </div>
   </section>
 
@@ -125,40 +123,67 @@
     </div>
   </section>
 
-  <!-- Start Footer -->
-<footer class="footer">
-  <p class="footer-title">جميع الحقوق محفوظة لمدرسة الريان © 2026 | تصميم وتطوير <span>إيهاب أبواليمن</span></p>
-    <p class="footer-title"> للتواصل مع المصمم <span> eabuleyaman@gmail.com </span></p>
-</footer>
+  <!-- التذييل -->
+  <footer class="footer">
+    <p class="footer-title">جميع الحقوق محفوظة لمدرسة الريان © 2026 | تصميم وتطوير <span>إيهاب أبواليمن</span></p>
+    <p class="footer-title">للتواصل مع المصمم <span>eabuleyaman@gmail.com</span></p>
+  </footer>
 
-<div class="cart-footer">
+  <!-- نافذة السلة المنبثقة -->
+  <div class="cart-modal" id="cartModal">
+    <div class="cart-content">
+      <div class="cart-header">
+        <h3>سلة الطلبات</h3>
+        <button type="button" class="close-btn" id="closeCartBtn">✕</button>
+      </div>
+
+      <div class="cart-items" id="cartItems">
+        <p class="empty-msg">السلة فارغة حالياً</p>
+      </div>
+
+      <div class="cart-footer">
         <div class="total-row">
           <span>الإجمالي:</span>
           <span id="cartTotal">0 ر.س</span>
         </div>
 
-        <!-- حقل اسم الزبون -->
-<input
-  type="tel"
-  id="customerPhoneInput"
-  placeholder="رقم جوال العميل (مثال: 05xxxxxxxx)"
-  style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 8px; font-family: inherit;"
-/>
+        <input
+          type="text"
+          id="customerOrderName"
+          placeholder="اكتب اسمك"
+          style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 8px; font-family: inherit;"
+        />
 
-<div id="orderReceipt" class="order-confirm-box hidden">
-  <p style="font-weight: 800; margin-bottom: 6px;">تم تأكيد الطلب بنجاح ☕</p>
-  <p style="font-size: 1.1rem; margin-bottom: 10px;">
-    رقم الطلب: <strong id="orderNumberDisplay"></strong>
-  </p>
-  <a
-    id="smsOrderLink"
-    href="#"
-    class="btn full-width"
-    style="background: #2b2118; color: #fff; text-decoration: none; display: block; padding: 10px; border-radius: 8px; font-weight: 700;"
-  >
-    إرسال رسالة SMS برقم الطلب للعميل
-  </a>
-</div>
+        <input
+          type="tel"
+          id="customerWhatsapp"
+          placeholder="رقم جوال / واتساب العميل (مثال: 05xxxxxxxx)"
+          style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 8px; font-family: inherit;"
+        />
+
+        <button type="button" id="checkoutBtn" class="btn btn-primary full-width">
+          إتمام الطلب
+        </button>
+
+        <div id="orderReceipt" class="order-confirm-box hidden">
+          <p style="font-weight: 800; margin-bottom: 6px;">تم تأكيد طلبك بنجاح ☕</p>
+          <p style="font-size: 1.1rem; margin-bottom: 10px;">
+            رقم الطلب: <strong id="orderNumberDisplay"></strong>
+          </p>
+          <a
+            id="whatsappOrderLink"
+            href="#"
+            target="_blank"
+            class="btn full-width"
+            style="background: #25D366; color: #fff; text-decoration: none; display: block; padding: 10px; border-radius: 8px; font-weight: 700;"
+          >
+            إرسال رقم الطلب
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="Js/script.js"></script>
 </body>
 </html>
