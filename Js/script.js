@@ -1,4 +1,5 @@
 console.log("SCRIPT LOADED");
+
 // بيانات قائمة المقهى
 const menuItems = [
   {
@@ -168,6 +169,9 @@ let cart = [];
 // اختر نوع الإرسال: "whatsapp" أو "sms"
 const SEND_MODE = "whatsapp";
 
+// اختيار طريقة الدفع الافتراضية
+let selectedPaymentMethod = "مدى";
+
 // عناصر DOM
 const menuGrid = document.getElementById("menuGrid");
 const filterBtns = document.querySelectorAll(".filter-btn");
@@ -178,8 +182,18 @@ const cartItemsContainer = document.getElementById("cartItems");
 const cartCount = document.getElementById("cartCount");
 const cartTotal = document.getElementById("cartTotal");
 const checkoutBtn = document.getElementById("checkoutBtn");
+const paymentChips = document.querySelectorAll(".payment-chip");
 const bookingForm = document.getElementById("bookingForm");
 const bookingMessage = document.getElementById("bookingMessage");
+
+// تفعيل أزرار طرق الدفع
+paymentChips.forEach((chip) => {
+  chip.addEventListener("click", () => {
+    paymentChips.forEach((c) => c.classList.remove("active"));
+    chip.classList.add("active");
+    selectedPaymentMethod = chip.dataset.method || "مدى";
+  });
+});
 
 // عرض عناصر القائمة
 function renderMenu(category = "all") {
@@ -202,7 +216,7 @@ function renderMenu(category = "all") {
           </div>
           <p class="card-desc">${item.desc}</p>
         </div>
-        <button class="add-btn" onclick="addToCart(${item.id})">+ أضف للسلة</button>
+        <button type="button" class="add-btn" onclick="addToCart(${item.id})">+ أضف للسلة</button>
       </div>
     `;
     menuGrid.appendChild(card);
@@ -261,7 +275,7 @@ function updateCartUI() {
           ${item.qty} × ${item.price} ر.س
         </div>
       </div>
-      <button class="remove-item" onclick="removeFromCart(${item.id})">حذف</button>
+      <button type="button" class="remove-item" onclick="removeFromCart(${item.id})">حذف</button>
     </div>
   `).join("");
 }
@@ -269,6 +283,10 @@ function updateCartUI() {
 // فتح وإغلاق السلة عبر زر السلة في الأعلى
 function openCart() {
   if (!cartModal) return;
+  const receiptEl = document.getElementById("orderReceipt");
+  if (receiptEl && cart.length > 0) {
+    receiptEl.classList.add("hidden");
+  }
   cartModal.style.display = "flex";
   cartModal.classList.add("open");
 }
@@ -328,7 +346,8 @@ if (checkoutBtn) {
     const textMessage =
       `مرحباً ${customerName} ☕\n` +
       `تم تأكيد طلبك في مقهى شهاب.\n` +
-      `رقم الطلب: ${orderNumber}\n\n` +
+      `رقم الطلب: ${orderNumber}\n` +
+      `طريقة الدفع: ${selectedPaymentMethod}\n\n` +
       `الطلبات:\n${itemsList}\n\n` +
       `الإجمالي: ${totalPrice} ر.س`;
 
@@ -359,7 +378,7 @@ if (checkoutBtn) {
     }
     if (receiptEl) receiptEl.classList.remove("hidden");
 
-    alert(`تم تأكيد طلبك بنجاح ☕\nرقم الطلب: ${orderNumber}`);
+    alert(`تم تأكيد طلبك بنجاح ☕\nرقم الطلب: ${orderNumber}\nطريقة الدفع: ${selectedPaymentMethod}`);
 
     cart = [];
     updateCartUI();
