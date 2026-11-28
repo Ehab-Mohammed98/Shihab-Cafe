@@ -169,6 +169,9 @@ let cart = [];
 // اختر نوع الإرسال: "whatsapp" أو "sms"
 const SEND_MODE = "whatsapp";
 
+// رقم واتساب المحل بصيغة دولية بدون + أو أصفار في البداية (مثال: 9665XXXXXXXX)
+const SHOP_WHATSAPP = "966500000000";
+
 // اختيار طريقة الدفع الافتراضية
 let selectedPaymentMethod = "مدى";
 
@@ -326,7 +329,7 @@ if (cartModal) {
   });
 }
 
-// تحويل الرقم لصيغة دولية لواتساب
+// تحويل الرقم لصيغة دولية عند الحاجة
 function toInternationalPhone(rawPhone, defaultCountryCode = "966") {
   let digits = (rawPhone || "").replace(/\D/g, "");
   if (!digits) return "";
@@ -338,7 +341,7 @@ function toInternationalPhone(rawPhone, defaultCountryCode = "966") {
   return digits;
 }
 
-// تأكيد الطلب وتجهيز الرسالة برقم الطلب
+// تأكيد الطلب وإرساله لواتساب المحل مع الحفظ في Google Sheet
 if (checkoutBtn) {
   checkoutBtn.addEventListener("click", () => {
     if (cart.length === 0) {
@@ -356,90 +359,4 @@ if (checkoutBtn) {
 
     if (!rawPhone) {
       alert("يرجى إدخال رقم العميل أولاً.");
-      if (phoneInput) phoneInput.focus();
-      return;
-    }
-
-    const orderNumber = `SH-${Math.floor(1000 + Math.random() * 9000)}`;
-    const totalPrice = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
-    const itemsList = cart.map(item => `- ${item.name} (${item.qty} × ${item.price} ر.س)`).join("\n");
-
-    sendToGoogleSheet({
-      type: "order",
-      orderNumber: orderNumber,
-      customerName: customerName,
-      customerPhone: rawPhone,
-      paymentMethod: selectedPaymentMethod,
-      items: itemsList.replace(/\n/g, " | "),
-      total: totalPrice
-    });
-
-    const textMessage =
-      `مرحباً ${customerName} ☕\n` +
-      `تم تأكيد طلبك في مقهى شهاب.\n` +
-      `رقم الطلب: ${orderNumber}\n` +
-      `طريقة الدفع: ${selectedPaymentMethod}\n\n` +
-      `الطلبات:\n${itemsList}\n\n` +
-      `الإجمالي: ${totalPrice} ر.س`;
-
-    let targetUrl = "#";
-    if (SEND_MODE === "sms") {
-      const cleanSmsPhone = rawPhone.replace(/\s+/g, "");
-      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-      const sep = isIOS ? "&" : "?";
-      targetUrl = `sms:${cleanSmsPhone}${sep}body=${encodeURIComponent(textMessage)}`;
-    } else {
-      const intlPhone = toInternationalPhone(rawPhone);
-      targetUrl = `https://wa.me/${intlPhone}?text=${encodeURIComponent(textMessage)}`;
-    }
-
-    const orderNumEl = document.getElementById("orderNumberDisplay");
-    const receiptEl = document.getElementById("orderReceipt");
-    const actionLinkEl =
-      document.getElementById("whatsappOrderLink") ||
-      document.getElementById("smsOrderLink");
-
-    if (orderNumEl) orderNumEl.textContent = orderNumber;
-    if (actionLinkEl) {
-      actionLinkEl.href = targetUrl;
-      actionLinkEl.textContent =
-        SEND_MODE === "sms"
-          ? "إرسال رسالة SMS برقم الطلب"
-          : "إرسال رقم الطلب عبر واتساب";
-    }
-    if (receiptEl) receiptEl.classList.remove("hidden");
-
-    alert(`تم تأكيد طلبك بنجاح ☕\nرقم الطلب: ${orderNumber}\nطريقة الدفع: ${selectedPaymentMethod}`);
-
-    cart = [];
-    updateCartUI();
-  });
-}
-
-// معالجة نموذج الحجز
-if (bookingForm && bookingMessage) {
-  bookingForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const name = document.getElementById("guestName").value;
-    const phone = document.getElementById("guestPhone").value;
-    const date = document.getElementById("bookingDate").value;
-    const time = document.getElementById("bookingTime").value;
-    const count = document.getElementById("guestCount").value;
-
-    sendToGoogleSheet({
-      type: "booking",
-      guestName: name,
-      guestPhone: phone,
-      bookingDate: date,
-      bookingTime: time,
-      guestCount: count
-    });
-
-    bookingMessage.textContent = `شكراً لك يا ${name}! تم تأكيد حجز طاولتك ليوم ${date} الساعة ${time}.`;
-    bookingMessage.classList.remove("hidden");
-    bookingForm.reset();
-  });
-}
-
-// التشغيل الأولي
-renderMenu();
+      if (phoneInput
