@@ -359,4 +359,97 @@ if (checkoutBtn) {
 
     if (!rawPhone) {
       alert("يرجى إدخال رقم العميل أولاً.");
-      if (phoneInput
+      if (phoneInput) phoneInput.focus();
+      return;
+    }
+
+    const orderNumber = `SH-${Math.floor(1000 + Math.random() * 9000)}`;
+    const totalPrice = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+    const itemsList = cart.map(item => `- ${item.name} (${item.qty} × ${item.price} ر.س)`).join("\n");
+
+    // حفظ الطلب في Google Sheets
+    sendToGoogleSheet({
+      type: "order",
+      orderNumber: orderNumber,
+      customerName: customerName,
+      customerPhone: rawPhone,
+      paymentMethod: selectedPaymentMethod,
+      items: itemsList.replace(/\n/g, " | "),
+      total: totalPrice
+    });
+
+    // نص الرسالة المرسلة لواتساب المحل متضمنة بيانات العميل
+    const textMessage =
+      `طلب جديد - مقهى شهاب ☕\n` +
+      `رقم الطلب: ${orderNumber}\n` +
+      `اسم العميل: ${customerName}\n` +
+      `جوال العميل: ${rawPhone}\n` +
+      `طريقة الدفع: ${selectedPaymentMethod}\n\n` +
+      `الطلبات:\n${itemsList}\n\n` +
+      `الإجمالي: ${totalPrice} ر.س`;
+
+    const shopIntlPhone = toInternationalPhone(SHOP_WHATSAPP);
+    let targetUrl = "#";
+
+    if (SEND_MODE === "sms") {
+      const cleanSmsPhone = SHOP_WHATSAPP.replace(/\s+/g, "");
+      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+      const sep = isIOS ? "&" : "?";
+      targetUrl = `sms:${cleanSmsPhone}${sep}body=${encodeURIComponent(textMessage)}`;
+    } else {
+      targetUrl = `https://wa.me/${shopIntlPhone}?text=${encodeURIComponent(textMessage)}`;
+    }
+
+    const orderNumEl = document.getElementById("orderNumberDisplay");
+    const receiptEl = document.getElementById("orderReceipt");
+    const actionLinkEl =
+      document.getElementById("whatsappOrderLink") ||
+      document.getElementById("smsOrderLink");
+
+    if (orderNumEl) orderNumEl.textContent = orderNumber;
+    if (actionLinkEl) {
+      actionLinkEl.href = targetUrl;
+      actionLinkEl.textContent =
+        SEND_MODE === "sms"
+          ? "إرسال الطلب للمحل عبر SMS"
+          : "إرسال الطلب لواتساب المحل";
+    }
+    if (receiptEl) receiptEl.classList.remove("hidden");
+
+    // فتح واتساب المحل تلقائياً عند إتمام الطلب
+    window.open(targetUrl, "_blank");
+
+    alert(`تم تأكيد طلبك بنجاح ☕\nرقم الطلب: ${orderNumber}\nطريقة الدفع: ${selectedPaymentMethod}`);
+
+    cart = [];
+    updateCartUI();
+  });
+}
+
+// معالجة نموذج الحجز
+if (bookingForm && bookingMessage) {
+  bookingForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const name = document.getElementById("guestName").value;
+    const phone = document.getElementById("guestPhone").value;
+    const date = document.getElementById("bookingDate").value;
+    const time = document.getElementById("bookingTime").value;
+    const count = document.getElementById("guestCount").value;
+
+    sendToGoogleSheet({
+      type: "booking",
+      guestName: name,
+      guestPhone: phone,
+      bookingDate: date,
+      bookingTime: time,
+      guestCount: count
+    });
+
+    bookingMessage.textContent = `شكراً لك يا ${name}! تم تأكيد حجز طاولتك ليوم ${date} الساعة ${time}.`;
+    bookingMessage.classList.remove("hidden");
+    bookingForm.reset();
+  });
+}
+
+// التشغيل الأولي
+renderMenu();
