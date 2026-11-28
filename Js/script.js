@@ -170,7 +170,7 @@ let cart = [];
 const SEND_MODE = "whatsapp";
 
 // رقم واتساب المحل بصيغة دولية بدون + أو أصفار في البداية (مثال: 9665XXXXXXXX)
-const SHOP_WHATSAPP = "966500000000";
+const SHOP_WHATSAPP = "966569060751";
 
 // اختيار طريقة الدفع الافتراضية
 let selectedPaymentMethod = "مدى";
